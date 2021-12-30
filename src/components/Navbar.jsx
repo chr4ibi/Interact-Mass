@@ -78,6 +78,7 @@ const Nav = styled.nav`
 const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 80px;
   z-index: 1;
   width: 100%;
@@ -100,11 +101,7 @@ const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
+    display: flex;
     font-size: 1.8rem;
     cursor: pointer;
     color: ${({ isBlack }) => (isBlack ? ({ scrollNav }) => (scrollNav ? "#fff" : "#000") : "#fff")};
