@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 // Import components
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
+import Separator from '../components/Separator'
 
 // Import assets
 import homebg from "../assets/images/homebg.jpeg";
@@ -40,7 +41,7 @@ const Homepage = () => {
           <AboutImage></AboutImage>
           <AboutContent>
             <AboutTitle>Who we are</AboutTitle>
-            <AboutSeparator></AboutSeparator>
+            <Separator />
             <AboutParagraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -58,7 +59,7 @@ const Homepage = () => {
       <ActionSection>
         <ActionWrapper>
           <ActionTitle>What we do</ActionTitle>
-          <ActionSeparator></ActionSeparator>
+          <Separator />
           <ActionContent>
             <ActionCard>
               <ActionCardImage1></ActionCardImage1>
@@ -92,7 +93,7 @@ const Homepage = () => {
         <ShopWrapper>
           <ShopContent>
             <ShopTitle>How you can help</ShopTitle>
-            <ShopSeparator></ShopSeparator>
+            <Separator />
             <ShopParagraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -249,15 +250,6 @@ const AboutTitle = styled.h1`
   margin-bottom: 20px;
 `;
 
-const AboutSeparator = styled.div`
-  background-color: #64a9e9;
-  width: 100px;
-  height: 10px;
-  border-radius: 90px;
-  opacity: 0.6;
-  margin-bottom: 20px;
-`;
-
 const AboutParagraph = styled.p`
   text-align: justify;
   margin-bottom: 20px;
@@ -294,19 +286,10 @@ const ActionTitle = styled.h1`
   margin-bottom: 20px;
 `;
 
-const ActionSeparator = styled.div`
-  background-color: #64a9e9;
-  width: 100px;
-  height: 10px;
-  border-radius: 90px;
-  opacity: 0.6;
-`;
-
 const ActionContent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 20px 0px;
 
   @media screen and (max-width: 1000px) {
     flex-direction: column;
@@ -407,15 +390,6 @@ const ShopContent = styled.div`
 const ShopTitle = styled.h1`
   font-size: 32px;
   line-height: 1;
-  margin-bottom: 20px;
-`;
-
-const ShopSeparator = styled.div`
-  background-color: #64a9e9;
-  width: 100px;
-  height: 10px;
-  border-radius: 90px;
-  opacity: 0.6;
   margin-bottom: 20px;
 `;
 

@@ -132,6 +132,7 @@ const NavLink = styled(LinkR)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  font-weight: bold;
 
   &.active {
     border-bottom: 3px solid #01bf71;
