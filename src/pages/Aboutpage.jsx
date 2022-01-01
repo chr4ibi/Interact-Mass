@@ -7,6 +7,12 @@ import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import AboutContent from "../components/AboutContent";
 import Separator from '../components/Separator'
+import Footer from '../components/Footer'
+import MemberCard from '../components/MemberCard'
+
+// Import assets
+import { members } from "../utils/data";
+import wave from '../assets/illustrations/wave.svg'
 
 const Aboutpage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,17 +31,30 @@ const Aboutpage = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </AboutDesc>
-          <AboutContent />
+          <AboutContent isImageFirst={true}/>
 
           <AboutTitle>Our <Blue>Values</Blue></AboutTitle>
           <Separator />
-          <AboutContent />
+          <AboutContent isImageFirst={false}/>
 
           <AboutTitle>Our <Blue>Mission</Blue></AboutTitle>
           <Separator />
-          <AboutContent />
+          <AboutContent isImageFirst={true}/>
         </AboutWrapper>
       </AboutSection>
+      <MembersSection>
+        <Wave></Wave>
+        <MembersWrapper>
+          <AboutTitle>Meet Our <Blue>Team</Blue></AboutTitle>
+          <Separator />
+          <MemberCards>
+            {members.map((e) => {
+              return <MemberCard profilePic={e.profilePic} name={e.name} role={e.role} />
+            })}
+          </MemberCards>
+        </MembersWrapper>
+      </MembersSection>
+      <Footer />
     </AboutContainer>
   );
 };
@@ -46,7 +65,6 @@ const AboutContainer = styled.div`
 `;
 
 const AboutSection = styled.div`
-  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -64,7 +82,7 @@ const AboutWrapper = styled.div`
 const AboutTitle = styled.h1`
   text-align: center;
   font-size: 32px;
-  margin: 5px 0px;
+  margin: 10px 0px;
 
   @media screen and (max-width: 420px){
     font-size: 28px;
@@ -79,6 +97,46 @@ const AboutDesc = styled.p`
 
 const Blue = styled.span`
   color: #64a9e9;
+`
+
+const MembersSection = styled.div`
+  width: 100%;
+  background-color: #ECF4FC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const Wave = styled.div`
+  width: 100%;
+  height: 200px;
+  background-image: url(${wave});
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (max-width: 1100px){
+    display: none;
+  }
+`
+
+const MembersWrapper = styled.div`
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: 1100px){
+    padding: 50px 0px;
+  }
+`
+
+const MemberCards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 30px 0px;
 `
 
 export default Aboutpage;

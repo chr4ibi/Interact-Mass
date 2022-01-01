@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Separator from '../components/Separator'
+import Footer from '../components/Footer' 
 
 // Import assets
 import homebg from "../assets/images/homebg.jpeg";
@@ -109,11 +110,7 @@ const Homepage = () => {
           <ShopImage></ShopImage>
         </ShopWrapper>
       </ShopSection>
-      <Footer>
-        <FooterText>
-          Copyright 2021 All Rights Reserved Interact Mass{" "}
-        </FooterText>
-      </Footer>
+      <Footer />
     </HomeContainer>
   );
 };
@@ -419,19 +416,6 @@ const ShopImage = styled.div`
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
 `;
 
-const Footer = styled.div`
-  width: 100%;
-  height: 80px;
-  background-color: #64a9e9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
-const FooterText = styled.p`
-  color: #fff;
-  font-size: 18px;
-  text-align: center;
-`;
 
 export default Homepage;
