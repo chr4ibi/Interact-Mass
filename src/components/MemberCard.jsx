@@ -37,12 +37,14 @@ const CardOverlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 1000px;
 `;
 
 const CardImgWrap = styled.div`
   width: 150px;
   position: relative;
   cursor: pointer;
+  border-radius: 90px;
 
   &:hover ${CardOverlay} {
     opacity: 0.6;
@@ -52,6 +54,7 @@ const CardImgWrap = styled.div`
 const CardImg = styled.img`
   width: 100%;
   height: 100%;
+  border-radius: 1000px;
 `;
 
 const CardTitle = styled.h1`

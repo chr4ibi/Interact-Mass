@@ -100,7 +100,7 @@ const NavLogo = styled(LinkR)`
 const MobileIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     display: flex;
     font-size: 1.8rem;
     cursor: pointer;
@@ -115,7 +115,7 @@ const NavMenu = styled.ul`
     text-align: center;
     margin-right -22px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
         display: none;
     }
 `;
@@ -148,7 +148,7 @@ const NavBtn = styled.nav`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;

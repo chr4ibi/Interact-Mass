@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 import MemberCard from '../components/MemberCard'
 
 // Import assets
-import { members } from "../utils/data";
+import { memberList } from "../utils/data";
 import wave from '../assets/illustrations/wave.svg'
 
 const Aboutpage = () => {
@@ -48,7 +48,7 @@ const Aboutpage = () => {
           <AboutTitle>Meet Our <Blue>Team</Blue></AboutTitle>
           <Separator />
           <MemberCards>
-            {members.map((e) => {
+            {memberList.map((e) => {
               return <MemberCard profilePic={e.profilePic} name={e.name} role={e.role} />
             })}
           </MemberCards>
@@ -67,7 +67,8 @@ const AboutContainer = styled.div`
 const AboutSection = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const AboutWrapper = styled.div`
