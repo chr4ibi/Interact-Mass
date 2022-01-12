@@ -2,22 +2,21 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 
 // Import components
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
-import Separator from '../components/Separator'
-import Footer from '../components/Footer' 
+import Separator from "../components/Separator";
+import Footer from "../components/Footer";
 
 // Import assets
 import homebg from "../assets/images/homebg.jpeg";
 import aboutimage from "../assets/images/aboutimage.jpeg";
-import galery1 from '../assets/images/galery1.jpeg'
-import galery2 from '../assets/images/galery2.jpeg'
-import galery3 from '../assets/images/galery3.jpeg'
-import sweatshirt from '../assets/images/sweatshirt.jpeg'
-
-
+import galery1 from "../assets/images/galery1.jpeg";
+import galery2 from "../assets/images/galery2.jpeg";
+import galery3 from "../assets/images/galery3.jpeg";
+import sweatshirt from "../assets/images/sweatshirt.jpeg";
 
 const Homepage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,74 +38,88 @@ const Homepage = () => {
       </HeroSection>
       <AboutSection>
         <AboutWrapper>
-          <AboutImage></AboutImage>
-          <AboutContent>
-            <AboutTitle>Who we are</AboutTitle>
-            <Separator />
-            <AboutParagraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-              <br></br>
-              <br></br>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur.
-            </AboutParagraph>
-            <AboutButton to="/about">Read More</AboutButton>
-          </AboutContent>
+          <AboutImage src={aboutimage}></AboutImage>
+          <Fade right>
+            <AboutContent>
+              <AboutTitle>Who we are</AboutTitle>
+              <Separator />
+              <AboutParagraph>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+                <br></br>
+                <br></br>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.
+              </AboutParagraph>
+              <AboutButton to="/about">Read More</AboutButton>
+            </AboutContent>
+          </Fade>
         </AboutWrapper>
       </AboutSection>
       <ActionSection>
         <ActionWrapper>
-          <ActionTitle>What we do</ActionTitle>
-          <Separator />
+          <Fade top>
+            <ActionTitle>What we do</ActionTitle>
+            <Separator />
+          </Fade>
           <ActionContent>
-            <ActionCard>
-              <ActionCardImage1></ActionCardImage1>
-              <ActionCardTitle>Lorem Ipsum</ActionCardTitle>
-              <ActionCardDesc>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </ActionCardDesc>
-            </ActionCard>
-            <ActionCard>
-              <ActionCardImage2></ActionCardImage2>
-              <ActionCardTitle>Lorem Ipsum</ActionCardTitle>
-              <ActionCardDesc>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </ActionCardDesc>
-            </ActionCard>
-            <ActionCard>
-              <ActionCardImage3></ActionCardImage3>
-              <ActionCardTitle>Lorem Ipsum</ActionCardTitle>
-              <ActionCardDesc>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </ActionCardDesc>
-            </ActionCard>
+            <Fade left>
+              <ActionCard>
+                <ActionCardImage1></ActionCardImage1>
+                <ActionCardTitle>Lorem Ipsum</ActionCardTitle>
+                <ActionCardDesc>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </ActionCardDesc>
+              </ActionCard>
+            </Fade>
+            <Fade>
+              <ActionCard>
+                <ActionCardImage2></ActionCardImage2>
+                <ActionCardTitle>Lorem Ipsum</ActionCardTitle>
+                <ActionCardDesc>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </ActionCardDesc>
+              </ActionCard>
+            </Fade>
+            <Fade right>
+              <ActionCard>
+                <ActionCardImage3></ActionCardImage3>
+                <ActionCardTitle>Lorem Ipsum</ActionCardTitle>
+                <ActionCardDesc>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </ActionCardDesc>
+              </ActionCard>
+            </Fade>
           </ActionContent>
-          <ActionButton to='/galery'>Go to Galery</ActionButton>
+          <Fade bottom>
+            <ActionButton to="/galery">Go to Galery</ActionButton>
+          </Fade>
         </ActionWrapper>
       </ActionSection>
       <ShopSection>
         <ShopWrapper>
-          <ShopContent>
-            <ShopTitle>How you can help</ShopTitle>
-            <Separator />
-            <ShopParagraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-              <br></br>
-              <br></br>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur.
-            </ShopParagraph>
-            <ShopButton to='/shop'>Go to Shop</ShopButton>
-          </ShopContent>
+          <Fade left>
+            <ShopContent>
+              <ShopTitle>How you can help</ShopTitle>
+              <Separator />
+              <ShopParagraph>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+                <br></br>
+                <br></br>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.
+              </ShopParagraph>
+              <ShopButton to="/shop">Go to Shop</ShopButton>
+            </ShopContent>
+          </Fade>
           <ShopImage></ShopImage>
         </ShopWrapper>
       </ShopSection>
@@ -415,7 +428,5 @@ const ShopImage = styled.div`
   background-position: center;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
 `;
-
-
 
 export default Homepage;

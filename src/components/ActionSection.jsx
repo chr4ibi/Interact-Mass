@@ -1,20 +1,29 @@
 // Import libraries
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade"
 
 const ActionSection = ({ title, date, desc, images }) => {
   return (
     <Container>
       <Header>
+        <Fade left>
         <ActionTitle>{title}</ActionTitle>
+        </Fade>
+        <Fade right>
         <ActionDate>{date}</ActionDate>
+        </Fade>
       </Header>
+      <Fade bottom>
       <ActionDesc>{desc}</ActionDesc>
+      </Fade>
       <ImgWrapper>
         {images.map((e) => {
           return (
             <ImgLink>
+            <Fade bottom>
               <Img bg={e}></Img>
+              </Fade>
             </ImgLink>
           );
         })}

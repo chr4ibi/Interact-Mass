@@ -1,18 +1,19 @@
 // Import libraries
 import React, { useState } from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 // Import components
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import AboutContent from "../components/AboutContent";
-import Separator from '../components/Separator'
-import Footer from '../components/Footer'
-import MemberCard from '../components/MemberCard'
+import Separator from "../components/Separator";
+import Footer from "../components/Footer";
+import MemberCard from "../components/MemberCard";
 
 // Import assets
 import { memberList } from "../utils/data";
-import wave from '../assets/illustrations/wave.svg'
+import wave from "../assets/illustrations/wave.svg";
 
 const Aboutpage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,32 +27,46 @@ const Aboutpage = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <AboutSection>
         <AboutWrapper>
-          <AboutTitle>We are <Blue>Interact Mass</Blue></AboutTitle>
-          <AboutDesc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </AboutDesc>
-          <AboutContent isImageFirst={true}/>
-
-          <AboutTitle>Our <Blue>Values</Blue></AboutTitle>
+            <AboutTitle>
+              We are <Blue>Interact Mass</Blue>
+            </AboutTitle>
+            <AboutDesc>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </AboutDesc>
+          <AboutContent isImageFirst={true} />
+          <AboutTitle>
+            Our <Blue>Values</Blue>
+          </AboutTitle>
           <Separator />
-          <AboutContent isImageFirst={false}/>
-
-          <AboutTitle>Our <Blue>Mission</Blue></AboutTitle>
+          <AboutContent isImageFirst={false} />
+          <AboutTitle>
+            Our <Blue>Mission</Blue>
+          </AboutTitle>
           <Separator />
-          <AboutContent isImageFirst={true}/>
+          <AboutContent isImageFirst={true} />
         </AboutWrapper>
       </AboutSection>
       <MembersSection>
         <Wave></Wave>
         <MembersWrapper>
-          <AboutTitle>Meet Our <Blue>Team</Blue></AboutTitle>
-          <Separator />
-          <MemberCards>
-            {memberList.map((e) => {
-              return <MemberCard profilePic={e.profilePic} name={e.name} role={e.role} />
-            })}
-          </MemberCards>
+          <Fade top>
+            <AboutTitle>
+              Meet Our <Blue>Team</Blue>
+            </AboutTitle>
+            <Separator />
+          </Fade>
+            <MemberCards>
+              {memberList.map((e) => {
+                return (
+                  <MemberCard
+                    profilePic={e.profilePic}
+                    name={e.name}
+                    role={e.role}
+                  />
+                );
+              })}
+            </MemberCards>
         </MembersWrapper>
       </MembersSection>
       <Footer />
@@ -85,7 +100,7 @@ const AboutTitle = styled.h1`
   font-size: 32px;
   margin: 10px 0px;
 
-  @media screen and (max-width: 420px){
+  @media screen and (max-width: 420px) {
     font-size: 28px;
   }
 `;
@@ -98,15 +113,15 @@ const AboutDesc = styled.p`
 
 const Blue = styled.span`
   color: #64a9e9;
-`
+`;
 
 const MembersSection = styled.div`
   width: 100%;
-  background-color: #ECF4FC;
+  background-color: #ecf4fc;
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 const Wave = styled.div`
   width: 100%;
@@ -115,10 +130,10 @@ const Wave = styled.div`
   background-size: cover;
   background-position: center;
 
-  @media screen and (max-width: 1100px){
+  @media screen and (max-width: 1100px) {
     display: none;
   }
-`
+`;
 
 const MembersWrapper = styled.div`
   width: 90%;
@@ -127,10 +142,10 @@ const MembersWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (max-width: 1100px){
+  @media screen and (max-width: 1100px) {
     padding: 50px 0px;
   }
-`
+`;
 
 const MemberCards = styled.div`
   display: flex;
@@ -138,6 +153,6 @@ const MemberCards = styled.div`
   justify-content: center;
   width: 100%;
   padding: 30px 0px;
-`
+`;
 
 export default Aboutpage;

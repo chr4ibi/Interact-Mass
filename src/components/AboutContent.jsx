@@ -1,6 +1,7 @@
 // Import libraries
 import React from "react";
 import styled from "styled-components";
+import Fade from 'react-reveal/Fade'
 
 // Import assets
 import about1 from "../assets/illustrations/about1.svg";
@@ -9,6 +10,7 @@ const AboutContent = ({ isImageFirst }) => {
   return (
     <Container isImageFirst={isImageFirst}>
       <Image src={about1}></Image>
+      <Fade right={isImageFirst} left={!isImageFirst}>
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
@@ -30,6 +32,7 @@ const AboutContent = ({ isImageFirst }) => {
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat. 
       </Paragraph>
+      </Fade>
     </Container>
   );
 };
@@ -38,7 +41,7 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   flex-direction: ${({isImageFirst}) => isImageFirst ? 'row' : 'row-reverse'};
 
   @media screen and (max-width: 1100px){

@@ -13,6 +13,9 @@ const Contactpage = () => {
     <ContactContainer>
       <Navbar toggle={toggle} isBlack={true} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
+      <ContactWrapper>
+
+      </ContactWrapper>
     </ContactContainer>
   );
 };
@@ -21,5 +24,11 @@ const ContactContainer = styled.div`
   width: 100%;
   min-height: 100vh;
 `;
+
+const ContactWrapper = styled.div`
+  width: 90%;
+  max-width: 1200px;
+  
+`
 
 export default Contactpage;

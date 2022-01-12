@@ -1,10 +1,12 @@
 // Import libraries
 import React from "react";
 import styled from "styled-components";
+import Fade from 'react-reveal/Fade'
 
 const MemberCard = ({ profilePic, name, role }) => {
   return (
     <CardContainer>
+      <Fade bottom>
       <CardImgWrap>
         <CardImg src={profilePic}></CardImg>
         <CardOverlay>
@@ -12,6 +14,7 @@ const MemberCard = ({ profilePic, name, role }) => {
         </CardOverlay>
       </CardImgWrap>
       <CardTitle>{role}</CardTitle>
+      </Fade>
     </CardContainer>
   );
 };
