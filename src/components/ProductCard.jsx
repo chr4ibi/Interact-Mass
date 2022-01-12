@@ -54,12 +54,21 @@ const CardName = styled.h1`
   font-size: 24px;
   margin: 10px 0px;
   font-weight: 500;
+
+  @media screen and (max-width: 500px){
+      font-size: 22px;
+  }
 `;
 
 const CardPrice = styled.h2`
   color: #666;
   opacity: 0.8;
   font-weight: 400;
+  font-size: 24px;
+
+  @media screen and (max-width: 500px){
+    font-size: 20px;
+}
 `;
 
 const Color = styled.div`
