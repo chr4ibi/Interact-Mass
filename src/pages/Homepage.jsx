@@ -1,8 +1,9 @@
 // Import libraries
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link as LinkR } from "react-router-dom";
 import Fade from "react-reveal/Fade";
+import { Link as LinkS } from "react-scroll";
 
 // Import components
 import Navbar from "../components/Navbar";
@@ -31,12 +32,14 @@ const Homepage = () => {
       <Navbar toggle={toggle} isBlack={false} />
       <HeroSection>
         <HeroWrapper>
-          <HeroTitle>Interact Mass</HeroTitle>
-          <HeroDesc>Together for a better world</HeroDesc>
-          <HeroButton>Read more</HeroButton>
+          <Fade bottom>
+            <HeroTitle>Interact Mass</HeroTitle>
+            <HeroDesc>Together for a better world</HeroDesc>
+            <HeroButton to='about' smooth = {true} duration={1000} offset={-80}>Read more</HeroButton>
+          </Fade>
         </HeroWrapper>
       </HeroSection>
-      <AboutSection>
+      <AboutSection id="about">
         <AboutWrapper>
           <AboutImage src={aboutimage}></AboutImage>
           <Fade right>
@@ -53,7 +56,7 @@ const Homepage = () => {
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur.
               </AboutParagraph>
-              <AboutButton to="/about">Read More</AboutButton>
+              <AboutButton to="/about">Learn About Us</AboutButton>
             </AboutContent>
           </Fade>
         </AboutWrapper>
@@ -197,13 +200,14 @@ const HeroDesc = styled.p`
   }
 `;
 
-const HeroButton = styled.button`
+const HeroButton = styled(LinkS)`
   border: none;
   background-color: #64a9e9;
   padding: 5px 40px;
   color: #fff;
   font-size: 18px;
   text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     background-color: #fff;
@@ -266,7 +270,7 @@ const AboutParagraph = styled.p`
   font-size: 16px;
 `;
 
-const AboutButton = styled(Link)`
+const AboutButton = styled(LinkR)`
   border: none;
   background-color: #64a9e9;
   padding: 5px 40px;
@@ -357,7 +361,7 @@ const ActionCardDesc = styled.p`
   font-size: 16px;
 `;
 
-const ActionButton = styled(Link)`
+const ActionButton = styled(LinkR)`
   border: none;
   background-color: #64a9e9;
   padding: 5px 40px;
@@ -409,7 +413,7 @@ const ShopParagraph = styled.p`
   font-size: 16px;
 `;
 
-const ShopButton = styled(Link)`
+const ShopButton = styled(LinkR)`
   border: none;
   background-color: #64a9e9;
   padding: 5px 40px;

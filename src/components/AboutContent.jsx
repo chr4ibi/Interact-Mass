@@ -10,7 +10,7 @@ const AboutContent = ({ isImageFirst }) => {
   return (
     <Container isImageFirst={isImageFirst}>
       <Image src={about1}></Image>
-      <Fade right={isImageFirst} left={!isImageFirst}>
+      <Fade right={isImageFirst} left={!isImageFirst} cascade>
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.

@@ -27,6 +27,7 @@ const Aboutpage = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <AboutSection>
         <AboutWrapper>
+          <Fade top cascade>
             <AboutTitle>
               We are <Blue>Interact Mass</Blue>
             </AboutTitle>
@@ -34,16 +35,21 @@ const Aboutpage = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </AboutDesc>
+          </Fade>
           <AboutContent isImageFirst={true} />
+          <Fade top>
           <AboutTitle>
             Our <Blue>Values</Blue>
           </AboutTitle>
           <Separator />
+          </Fade>
           <AboutContent isImageFirst={false} />
+          <Fade>
           <AboutTitle>
             Our <Blue>Mission</Blue>
           </AboutTitle>
           <Separator />
+          </Fade>
           <AboutContent isImageFirst={true} />
         </AboutWrapper>
       </AboutSection>
@@ -56,17 +62,17 @@ const Aboutpage = () => {
             </AboutTitle>
             <Separator />
           </Fade>
-            <MemberCards>
-              {memberList.map((e) => {
-                return (
-                  <MemberCard
-                    profilePic={e.profilePic}
-                    name={e.name}
-                    role={e.role}
-                  />
-                );
-              })}
-            </MemberCards>
+          <MemberCards>
+            {memberList.map((e) => {
+              return (
+                <MemberCard
+                  profilePic={e.profilePic}
+                  name={e.name}
+                  role={e.role}
+                />
+              );
+            })}
+          </MemberCards>
         </MembersWrapper>
       </MembersSection>
       <Footer />
