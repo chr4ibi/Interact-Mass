@@ -33,9 +33,13 @@ const Homepage = () => {
       <HeroSection>
         <HeroWrapper>
           <Fade bottom>
-            <HeroTitle>Interact Mass</HeroTitle>
-            <HeroDesc>Together for a better world</HeroDesc>
-            <HeroButton to='about' smooth = {true} duration={1000} offset={-80}>Read more</HeroButton>
+            <HeroContent>
+              <HeroTitle>Interact Mass</HeroTitle>
+              <HeroDesc>Together for a better world</HeroDesc>
+              <HeroButton to="about" smooth={true} duration={1000} offset={-80}>
+                Read more
+              </HeroButton>
+            </HeroContent>
           </Fade>
         </HeroWrapper>
       </HeroSection>
@@ -169,6 +173,12 @@ const HeroWrapper = styled.div`
   z-index: 2;
 `;
 
+const HeroContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 const HeroTitle = styled.h1`
   color: #fff;
   font-weight: bold;
@@ -187,7 +197,9 @@ const HeroTitle = styled.h1`
 
 const HeroDesc = styled.p`
   color #fff;
-  font-size: 48px;
+  font-size: 40px;
+  line-height: 1;
+  margin: 5px 0px;
 
   @media screen and (max-width: 1000px) {
     text-align: center;
@@ -208,6 +220,7 @@ const HeroButton = styled(LinkS)`
   font-size: 18px;
   text-decoration: none;
   cursor: pointer;
+  margin: 10px 0px;
 
   &:hover {
     background-color: #fff;

@@ -24,7 +24,9 @@ const Shoppage = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <ShopSection>
         <ShopWrapper>
-          <ShopHeader></ShopHeader>
+          <ShopHeader>
+            
+          </ShopHeader>
           <ShopTitle>Our <Blue>Products</Blue></ShopTitle>
           <Separator />
           <ShopProducts>
