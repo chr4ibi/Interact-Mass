@@ -17,7 +17,7 @@ const Shoppage = () => {
     <ShopContainer>
       <ShopNavbar>
         <ShopMenu>
-        <BackButton to="/">Go Back Home</BackButton>
+        <BackButton to="/">Go Back</BackButton>
         <ShopButtons>
           <BasketValue>0 MAD</BasketValue>
           <ShoppingCartButton to="/cart">
@@ -94,6 +94,10 @@ const BackButton = styled(LinkR)`
     background-color: #83baed;
     transition: 0.3s;
   }
+
+  @media screen and (max-width: 550px){
+    font-size: 16px;
+  }
 `;
 
 const ShopButtons = styled.div`
@@ -108,29 +112,38 @@ const BasketValue = styled.h1`
   color: #666;
   opacity: 0.8;
   margin: 0px 10px;
+
+  @media screen and (max-width: 550px){
+    display: none;
+  }
 `;
 
 const ShoppingCartButton = styled(LinkR)`
   color: #000;
   display: flex;
   align-items: center;
+
+  
 `
 
 const ShoppingCartIcon = styled(AiOutlineShoppingCart)`
   font-size: 32px;
   margin: 0px 10px;
+
 `;
 
 const LoginButton = styled(LinkR)`
   margin: 0px 10px;
   font-size: 18px;
   color: #000;
+
 `;
 
 const RegisterButton = styled(LinkR)`
   margin: 0px 10px;
   font-size: 18px;
   color: #000;
+
 `;
 
 const ShopSection = styled.div`
