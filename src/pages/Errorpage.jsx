@@ -2,6 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 
 // Import assets
 import errorImg from "../assets/illustrations/404error.svg";
@@ -10,18 +11,20 @@ const Errorpage = () => {
   return (
     <ErrorContainer>
       <ErrorWrapper>
-        <ErrorContent>
-          <ErrorTitle>OOPS, PAGE NOT FOUND.</ErrorTitle>
-          <ErrorSubtitle>
-            Sorry, it seems like something is going wrong. The page you're
-            looking for doesn't exist. If you think something is broken, report
-            a problem
-          </ErrorSubtitle>
-          <ErrorButtons>
-            <ErrorButton to="/">VISIT HOME</ErrorButton>
-            <ErrorButton to="/contact">REPORT PROBLEM</ErrorButton>
-          </ErrorButtons>
-        </ErrorContent>
+        <Fade>
+          <ErrorContent>
+            <ErrorTitle>OOPS, PAGE NOT FOUND.</ErrorTitle>
+            <ErrorSubtitle>
+              Sorry, it seems like something is going wrong. The page you're
+              looking for doesn't exist. If you think something is broken,
+              report a problem.
+            </ErrorSubtitle>
+            <ErrorButtons>
+              <ErrorButton to="/">VISIT HOME</ErrorButton>
+              <ErrorButton to="/contact">REPORT PROBLEM</ErrorButton>
+            </ErrorButtons>
+          </ErrorContent>
+        </Fade>
         <ErrorImage src={errorImg}></ErrorImage>
       </ErrorWrapper>
     </ErrorContainer>

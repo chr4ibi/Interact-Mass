@@ -6,7 +6,13 @@ const Separator = () => {
 };
 
 const SeparatorContainer = styled.div`
-  background-color: #64a9e9;
+  background: rgb(1, 55, 80);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 118, 255, 0.9) 2%,
+    rgba(100, 169, 233, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
   width: 100px;
   height: 10px;
   border-radius: 90px;

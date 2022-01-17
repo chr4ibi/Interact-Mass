@@ -1,24 +1,25 @@
 // Import libraries
 import React from "react";
 import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
 
 const ProductCard = ({ id, name, price, sizes, colors, images }) => {
   return (
-    <CardContainer>
+    <CardContainer to="./product">
       <CardImage bg={images[0]}></CardImage>
       <CardHeader>
         <CardName>{name}</CardName>
         <CardPrice>{price} MAD</CardPrice>
       </CardHeader>
       <CardColors>
-          <Color bg={colors[0]}></Color>
-          <Color bg={colors[1]}></Color>
+        <Color bg={colors[0]}></Color>
+        <Color bg={colors[1]}></Color>
       </CardColors>
     </CardContainer>
   );
 };
 
-const CardContainer = styled.div`
+const CardContainer = styled(LinkR)`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   height: 450px;
@@ -28,6 +29,13 @@ const CardContainer = styled.div`
   padding: 15px;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: #000;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
 `;
 
 const CardImage = styled.div`
@@ -47,7 +55,7 @@ const CardHeader = styled.div`
 `;
 
 const CardColors = styled.div`
-    display: flex;
+  display: flex;
 `;
 
 const CardName = styled.h1`
@@ -55,8 +63,8 @@ const CardName = styled.h1`
   margin: 10px 0px;
   font-weight: 500;
 
-  @media screen and (max-width: 500px){
-      font-size: 22px;
+  @media screen and (max-width: 500px) {
+    font-size: 22px;
   }
 `;
 
@@ -66,17 +74,17 @@ const CardPrice = styled.h2`
   font-weight: 400;
   font-size: 24px;
 
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     font-size: 20px;
-}
+  }
 `;
 
 const Color = styled.div`
-    width: 20px;
-    height: 20px;
-    background-color: ${(props) => props.bg};
-    margin-right: 15px;
-    border: 1px solid black;
-`
+  width: 20px;
+  height: 20px;
+  background-color: ${(props) => props.bg};
+  margin-right: 15px;
+  border: 1px solid black;
+`;
 
 export default ProductCard;

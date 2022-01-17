@@ -36,9 +36,7 @@ const Homepage = () => {
             <HeroContent>
               <HeroTitle>Interact Mass</HeroTitle>
               <HeroDesc>Together for a better world</HeroDesc>
-              <HeroButton to="about" smooth={true} duration={1000} offset={-80}>
-                Read more
-              </HeroButton>
+              <HeroButton>Read More</HeroButton>
             </HeroContent>
           </Fade>
         </HeroWrapper>
@@ -215,7 +213,7 @@ const HeroDesc = styled.p`
 const HeroButton = styled(LinkS)`
   border: none;
   background-color: #64a9e9;
-  padding: 5px 40px;
+  padding: 5px 20px;
   color: #fff;
   font-size: 18px;
   text-decoration: none;
@@ -223,9 +221,8 @@ const HeroButton = styled(LinkS)`
   margin: 10px 0px;
 
   &:hover {
-    background-color: #fff;
-    color: #64a9e9;
-    transition: 0.2s;
+    background-color: #83baed; 
+    transition: 0.3s;
   }
 `;
 
@@ -286,10 +283,15 @@ const AboutParagraph = styled.p`
 const AboutButton = styled(LinkR)`
   border: none;
   background-color: #64a9e9;
-  padding: 5px 40px;
+  padding: 5px 20px;
   color: #fff;
   font-size: 18px;
   text-decoration: none;
+
+  &:hover {
+    background-color: #83baed; 
+    transition: 0.3s;
+  }
 `;
 
 const ActionSection = styled.div`
@@ -377,10 +379,15 @@ const ActionCardDesc = styled.p`
 const ActionButton = styled(LinkR)`
   border: none;
   background-color: #64a9e9;
-  padding: 5px 40px;
+  padding: 5px 20px;
   color: #fff;
   font-size: 18px;
   text-decoration: none;
+
+  &:hover {
+    background-color: #83baed; 
+    transition: 0.3s;
+  }
 `;
 
 const ShopSection = styled.div`
@@ -429,10 +436,15 @@ const ShopParagraph = styled.p`
 const ShopButton = styled(LinkR)`
   border: none;
   background-color: #64a9e9;
-  padding: 5px 40px;
+  padding: 5px 20px;
   color: #fff;
   font-size: 18px;
   text-decoration: none;
+
+  &:hover {
+    background-color: #83baed; 
+    transition: 0.3s;
+  }
 `;
 
 const ShopImage = styled.div`

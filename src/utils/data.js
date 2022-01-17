@@ -151,7 +151,7 @@ export const actionList = [
 export const productList = [
   {
     id: 0,
-    name: "Purple Sweatshirt",
+    name: "Purple Sweat",
     price: 250,
     sizes: ["Small", "Medium"],
     colors: ["#D1C2EB", "#000"],
@@ -159,7 +159,7 @@ export const productList = [
   },
   {
     id: 1,
-    name: "Blue Sweatshirt",
+    name: "Blue Sweat",
     price: 250,
     sizes: ["Small", "Medium"],
     colors: ["#CADFF0", "#fff"],
@@ -167,7 +167,7 @@ export const productList = [
   },
   {
     id: 2,
-    name: "Black Sweatshirt",
+    name: "Black Sweat",
     price: 250,
     sizes: ["Small", "Medium"],
     colors: ["#000", "#fff"],
@@ -175,7 +175,7 @@ export const productList = [
   },
   {
     id: 3,
-    name: "Brown Sweatshirt",
+    name: "Brown Sweat",
     price: 250,
     sizes: ["Small", "Medium"],
     colors: ["#DBC7AE", "#fff"],
