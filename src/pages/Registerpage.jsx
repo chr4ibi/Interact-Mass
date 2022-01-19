@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { BsFillPersonFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
+import ShopNavbar from "../components/ShopNavbar";
 
 // Import components
 import Separator from "../components/Separator";
@@ -12,6 +13,7 @@ import Button from "../components/Button";
 const Registerpage = () => {
   return (
     <Container>
+      <ShopNavbar dark={false} backPath="/shop"/>
       <Wrapper>
         <Title>Create an account</Title>
         <Separator />
@@ -44,7 +46,7 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   background: rgb(1, 55, 80);
   background: linear-gradient(
@@ -54,6 +56,7 @@ const Container = styled.div`
     rgba(0, 212, 255, 1) 100%
   );
 `;
+
 const Wrapper = styled.div`
   padding: 20px;
   background-color: rgba(255, 255, 255, 1);
@@ -62,10 +65,12 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 90%;
+  margin-top: 150px;
 `;
 const Title = styled.form`
   font-size: 28px;
   font-weight: bold;
+  margin: 10px 0px;
 `;
 
 const Form = styled.div`
@@ -86,9 +91,9 @@ const FirstName = styled.input`
   padding: 5px;
   margin: 10px;
 
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     width: 120px;
-}
+  }
 `;
 
 const LastName = styled.input`
@@ -98,9 +103,9 @@ const LastName = styled.input`
   padding: 5px;
   margin: 10px;
 
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     width: 120px;
-}
+  }
 `;
 
 const EmailSection = styled.div`
@@ -119,7 +124,6 @@ const NameIcon = styled(BsFillPersonFill)`
 
 const EmailIcon = styled(MdEmail)`
   font-size: 32px;
-  
 `;
 
 const PasswordIcon = styled(FaLock)`
@@ -133,9 +137,9 @@ const Input = styled.input`
   padding: 5px;
   margin: 10px;
 
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     width: 260px;
-}
+  }
 `;
 
 export default Registerpage;

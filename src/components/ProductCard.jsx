@@ -24,7 +24,7 @@ const CardContainer = styled(LinkR)`
   border-radius: 15px;
   height: 450px;
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
   margin: 10px;
   padding: 15px;
   display: flex;
@@ -33,7 +33,7 @@ const CardContainer = styled(LinkR)`
   color: #000;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.3s;
   }
 `;

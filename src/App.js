@@ -12,9 +12,11 @@ import Errorpage from "./pages/Errorpage";
 import Productpage from "./pages/Productpage";
 import Loginpage from "./pages/Loginpage";
 import Registerpage from "./pages/Registerpage";
+import Cartpage from "./pages/Cartpage";
 
 // Import assets
 import "./App.css";
+
 
 const App = () => {
   return (
@@ -26,7 +28,8 @@ const App = () => {
         <Route exact path="/shop" element={<Shoppage />} />
         <Route exact path="/shop/product" element={<Productpage />} />
         <Route exact path="/shop/login" element={<Loginpage />} />
-        <Route exact path="/shop/Register" element={<Registerpage />} />
+        <Route exact path="/shop/register" element={<Registerpage />} />
+        <Route exact path="/shop/cart" element={<Cartpage />} />
         <Route path="*" element={<Errorpage />}/>
       </Routes>
     </ScrollToTop>

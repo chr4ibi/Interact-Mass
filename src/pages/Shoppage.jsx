@@ -1,9 +1,7 @@
 // import libraries
 import React from "react";
 import styled from "styled-components";
-import { Link as LinkR } from "react-router-dom";
 import Fade from "react-reveal/Fade";
-import { AiOutlineShoppingCart } from "react-icons/ai";
 
 // import components
 import ProductCard from "../components/ProductCard";
@@ -11,23 +9,12 @@ import Separator from "../components/Separator";
 
 // import assets
 import { productList } from "../utils/data";
+import ShopNavbar from "../components/ShopNavbar";
 
 const Shoppage = () => {
   return (
     <ShopContainer>
-      <ShopNavbar>
-        <ShopMenu>
-        <BackButton to="/">Go Back</BackButton>
-        <ShopButtons>
-          <BasketValue>0 MAD</BasketValue>
-          <ShoppingCartButton to="/cart">
-            <ShoppingCartIcon></ShoppingCartIcon>
-          </ShoppingCartButton>
-          <LoginButton to="./login">Login</LoginButton>
-          <RegisterButton to="./register">Register</RegisterButton>
-        </ShopButtons>
-        </ShopMenu>
-      </ShopNavbar>
+      <ShopNavbar dark={true} backPath="/"/>
       <ShopSection>
         <ShopWrapper>
           <Fade top>
@@ -62,88 +49,6 @@ const ShopContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const ShopNavbar = styled.div`
-  height: 80px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const ShopMenu = styled.div`
-  width: 90%;
-  height: 100%;
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-
-const BackButton = styled(LinkR)`
-  text-decoration: none;
-  background-color: #64a9e9;
-  color: #fff;
-  padding: 5px 20px;
-  border-radius: 90px;
-  font-size: 18px;
-  font-weight: 500;
-
-  &:hover {
-    background-color: #83baed;
-    transition: 0.3s;
-  }
-
-  @media screen and (max-width: 550px){
-    font-size: 16px;
-  }
-`;
-
-const ShopButtons = styled.div`
-  display: flex;
-  height: 100%;
-  align-items: center;
-`;
-
-const BasketValue = styled.h1`
-  font-size: 24px;
-  font-weight: 400;
-  color: #666;
-  opacity: 0.8;
-  margin: 0px 10px;
-
-  @media screen and (max-width: 550px){
-    display: none;
-  }
-`;
-
-const ShoppingCartButton = styled(LinkR)`
-  color: #000;
-  display: flex;
-  align-items: center;
-
-  
-`
-
-const ShoppingCartIcon = styled(AiOutlineShoppingCart)`
-  font-size: 32px;
-  margin: 0px 10px;
-
-`;
-
-const LoginButton = styled(LinkR)`
-  margin: 0px 10px;
-  font-size: 18px;
-  color: #000;
-
-`;
-
-const RegisterButton = styled(LinkR)`
-  margin: 0px 10px;
-  font-size: 18px;
-  color: #000;
-
 `;
 
 const ShopSection = styled.div`
