@@ -4,11 +4,14 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link as LinkR } from "react-router-dom";
 import styled from "styled-components"
 
+// Import components
+import LinkButton from './LinkButton'
+
 const ShopNavbar = ({ dark, backPath }) => {
   return (
     <Navbar>
       <Menu>
-        <BackButton to={backPath}>Go Back</BackButton>
+        <LinkButton blue={true} to={backPath} text='GO BACK'/>
         <Buttons>
           <BasketValue dark={dark}>0 MAD</BasketValue>
           <ShoppingCartButton to="/shop/cart">
@@ -37,25 +40,6 @@ const Menu = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
-
-const BackButton = styled(LinkR)`
-  text-decoration: none;
-  background-color: #64a9e9;
-  color: #fff;
-  padding: 5px 20px;
-  border-radius: 90px;
-  font-size: 18px;
-  font-weight: 500;
-
-  &:hover {
-    background-color: #83baed;
-    transition: 0.3s;
-  }
-
-  @media screen and (max-width: 550px) {
-    font-size: 16px;
-  }
 `;
 
 const Buttons = styled.div`

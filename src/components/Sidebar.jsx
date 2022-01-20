@@ -39,7 +39,7 @@ export const SidebarContainer = styled.div`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #64a9e9;
+  background: #0070f3;
   display: grid;
   align-items: center;
   top: 0;
@@ -104,7 +104,7 @@ export const SidebarRoute = styled(LinkR)`
   background: #fff;
   white-space: nowrap;
   padding: 10px 40px;
-  color: #64a9e9;
+  color: #0070f3;
   font-size: 16px;
   outline: none;
   border: none;

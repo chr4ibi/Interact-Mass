@@ -1,15 +1,14 @@
 // Import libraries
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link as LinkR } from "react-router-dom";
 import Fade from "react-reveal/Fade";
-import { Link as LinkS } from "react-scroll";
 
 // Import components
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Separator from "../components/Separator";
 import Footer from "../components/Footer";
+import LinkButton from "../components/LinkButton";
 
 // Import assets
 import homebg from "../assets/images/homebg.jpeg";
@@ -36,7 +35,7 @@ const Homepage = () => {
             <HeroContent>
               <HeroTitle>Interact Mass</HeroTitle>
               <HeroDesc>Together for a better world</HeroDesc>
-              <HeroButton>Read More</HeroButton>
+              <LinkButton to='/' blue={true} text="READ MORE" />
             </HeroContent>
           </Fade>
         </HeroWrapper>
@@ -49,7 +48,7 @@ const Homepage = () => {
               <AboutTitle>Who we are</AboutTitle>
               <Separator />
               <AboutParagraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                Lorem ipsum <Highlight>dolor</Highlight> sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
@@ -58,7 +57,7 @@ const Homepage = () => {
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur.
               </AboutParagraph>
-              <AboutButton to="/about">Learn About Us</AboutButton>
+              <LinkButton to='about' text="LEARN ABOUT US" blue={true} />
             </AboutContent>
           </Fade>
         </AboutWrapper>
@@ -102,7 +101,7 @@ const Homepage = () => {
             </Fade>
           </ActionContent>
           <Fade bottom>
-            <ActionButton to="/galery">Go to Galery</ActionButton>
+            <LinkButton to='/galery'text="GO TO GALERY" blue={true} />
           </Fade>
         </ActionWrapper>
       </ActionSection>
@@ -122,7 +121,7 @@ const Homepage = () => {
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur.
               </ShopParagraph>
-              <ShopButton to="/shop">Go to Shop</ShopButton>
+              <LinkButton to='/shop' text='GO TO SHOP' blue={true}/>
             </ShopContent>
           </Fade>
           <ShopImage></ShopImage>
@@ -175,7 +174,7 @@ const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 const HeroTitle = styled.h1`
   color: #fff;
@@ -207,22 +206,6 @@ const HeroDesc = styled.p`
   @media screen and (max-width: 500px) {
     font-size: 24px;
     margin: 5px 0px;
-  }
-`;
-
-const HeroButton = styled(LinkS)`
-  border: none;
-  background-color: #64a9e9;
-  padding: 5px 20px;
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-  cursor: pointer;
-  margin: 10px 0px;
-
-  &:hover {
-    background-color: #83baed; 
-    transition: 0.3s;
   }
 `;
 
@@ -280,19 +263,10 @@ const AboutParagraph = styled.p`
   font-size: 16px;
 `;
 
-const AboutButton = styled(LinkR)`
-  border: none;
-  background-color: #64a9e9;
-  padding: 5px 20px;
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-
-  &:hover {
-    background-color: #83baed; 
-    transition: 0.3s;
-  }
-`;
+const Highlight = styled.span`
+  font-weight: bold;
+  color: #0070f3;
+`
 
 const ActionSection = styled.div`
   display: flex;
@@ -376,20 +350,6 @@ const ActionCardDesc = styled.p`
   font-size: 16px;
 `;
 
-const ActionButton = styled(LinkR)`
-  border: none;
-  background-color: #64a9e9;
-  padding: 5px 20px;
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-
-  &:hover {
-    background-color: #83baed; 
-    transition: 0.3s;
-  }
-`;
-
 const ShopSection = styled.div`
   display: flex;
   align-items: center;
@@ -431,20 +391,6 @@ const ShopParagraph = styled.p`
   text-align: justify;
   margin-bottom: 20px;
   font-size: 16px;
-`;
-
-const ShopButton = styled(LinkR)`
-  border: none;
-  background-color: #64a9e9;
-  padding: 5px 20px;
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-
-  &:hover {
-    background-color: #83baed; 
-    transition: 0.3s;
-  }
 `;
 
 const ShopImage = styled.div`

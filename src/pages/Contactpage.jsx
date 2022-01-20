@@ -1,7 +1,11 @@
+// Import libraries
 import React, { useState} from "react";
+import styled from 'styled-components'
+
+// Import components
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
-import styled from 'styled-components'
+
 
 const Contactpage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,9 +17,13 @@ const Contactpage = () => {
     <ContactContainer>
       <Navbar toggle={toggle} isBlack={true} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <ContactWrapper>
+      <ContactSection>
+        <ContactTitle>Contact Us</ContactTitle>
+        <ContactSubtitle>Any question or remarks ? Just write us a message !</ContactSubtitle>
+        <ContactWrapper>
 
-      </ContactWrapper>
+        </ContactWrapper>
+      </ContactSection>
     </ContactContainer>
   );
 };
@@ -25,10 +33,22 @@ const ContactContainer = styled.div`
   min-height: 100vh;
 `;
 
+const ContactSection = styled.div`
+
+`
+
 const ContactWrapper = styled.div`
   width: 90%;
   max-width: 1200px;
   
+`
+
+const ContactTitle = styled.h1`
+
+`
+
+const ContactSubtitle = styled.h2`
+
 `
 
 export default Contactpage;

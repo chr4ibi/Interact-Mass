@@ -77,7 +77,7 @@ const ShopTitle = styled.h1`
 `;
 
 const Blue = styled.span`
-  color: #64a9e9;
+  color: #0070f3;
 `;
 
 const ShopProducts = styled.div`

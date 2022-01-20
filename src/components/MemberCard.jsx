@@ -47,7 +47,7 @@ const CardImgWrap = styled.div`
   width: 150px;
   position: relative;
   cursor: pointer;
-  border-radius: 90px;
+  border-radius: 1000px;
 
   &:hover ${CardOverlay} {
     opacity: 0.6;
@@ -65,7 +65,7 @@ const CardTitle = styled.h1`
   line-height: 1;
   font-weight: 400;
   margin: 15px 0px;
-  color: #64a9e9;
+  color: #0070f3;
 `;
 
 const CardName = styled.h1`

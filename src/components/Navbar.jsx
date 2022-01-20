@@ -62,7 +62,7 @@ const Navbar = ({ toggle, isBlack }) => {
 };
 
 const Nav = styled.nav`
-  background: ${({ scrollNav }) => (scrollNav ? "#64A9E9" : "transparent")};
+  background: ${({ scrollNav }) => (scrollNav ? "#0070f3" : "transparent")};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -139,7 +139,7 @@ const NavLink = styled(LinkR)`
   }
 
   &:hover {
-    color: ${({ scrollNav }) => (scrollNav ? "#000" : "#64A9E9")};
+    color: ${({ scrollNav }) => (scrollNav ? "#000" : "#0070f3")};
     transition: 0.2s;
   }
 `;

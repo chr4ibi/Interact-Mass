@@ -12,11 +12,11 @@ const ButtonContainer = styled.button`
   cursor: pointer;
   border: none;
   padding: 0 56px;
-  margin: 15px;
+  margin: 10px 0px;
   height: 45px;
   line-height: 45px;
   border-radius: 7px;
-  background-color: ${(props) => props.blue ? '#64a9e9' : '#fff'};
+  background-color: ${(props) => props.blue ? '#0070f3' : '#fff'};
   color: ${(props) => props.blue ? '#fff' : '#696969'};
   font-weight: 400;
   font-size: 16px;

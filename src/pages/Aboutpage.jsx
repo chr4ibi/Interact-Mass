@@ -118,7 +118,7 @@ const AboutDesc = styled.p`
 `;
 
 const Blue = styled.span`
-  color: #64a9e9;
+  color: rgba(0, 118, 255, 0.9);
 `;
 
 const MembersSection = styled.div`

@@ -45,7 +45,7 @@ const Header = styled.div`
 `;
 
 const ActionTitle = styled.h1`
-  color: #64a9e9;
+  color: #0070f3;
   line-height: 1;
 `;
 

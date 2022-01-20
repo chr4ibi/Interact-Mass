@@ -8,7 +8,7 @@ import ShopNavbar from "../components/ShopNavbar";
 
 // Import components
 import Separator from "../components/Separator";
-import Button from "../components/Button";
+import ActionButton from "../components/ActionButton";
 
 const Registerpage = () => {
   return (
@@ -35,7 +35,7 @@ const Registerpage = () => {
             <PasswordIcon></PasswordIcon>
             <Input placeholder="Confirm Password" />
           </PasswordSection>
-          <Button text="REGISTER" blue={true} />
+          <ActionButton text="REGISTER" blue={true} />
         </Form>
       </Wrapper>
     </Container>

@@ -7,7 +7,7 @@ import { FaLock } from "react-icons/fa";
 
 // Import components
 import Separator from "../components/Separator";
-import Button from '../components/Button'
+import ActionButton from '../components/ActionButton'
 import ShopNavbar from "../components/ShopNavbar";
 
 
@@ -27,7 +27,7 @@ const Loginpage = () => {
             <PasswordIcon></PasswordIcon>
             <Input placeholder="Password" />
           </PasswordSection>
-          <Button text="LOGIN" blue={true} />
+          <ActionButton text="LOGIN" blue={true} />
           <Link to='/shop/register'>DON'T YOU REMEMBER THE PASSWORD ?</Link>
           <Link to='/shop/register'>CREATE A NEW ACCOUNT</Link>
         </Form>

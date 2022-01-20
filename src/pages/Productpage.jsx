@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 // Import components
 import ShopNavbar from "../components/ShopNavbar";
-import Button from '../components/Button'
+import ActionButton from '../components/ActionButton'
 
 // Import assets
 import img from "../assets/images/brownsweat1.jpeg";
@@ -34,7 +34,7 @@ const Productpage = () => {
               <ProductColor></ProductColor>
               <ProductColor></ProductColor>
             </ProductColors>
-            <Button blue={true} text='Add To Cart'/>
+            <ActionButton blue={true} text='Add To Cart'/>
           </ProductContent>
         </ProductWrapper>
       </ProductSection>

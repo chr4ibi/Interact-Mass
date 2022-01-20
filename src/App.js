@@ -13,6 +13,7 @@ import Productpage from "./pages/Productpage";
 import Loginpage from "./pages/Loginpage";
 import Registerpage from "./pages/Registerpage";
 import Cartpage from "./pages/Cartpage";
+import Contactpage from "./pages/Contactpage";
 
 // Import assets
 import "./App.css";
@@ -25,6 +26,7 @@ const App = () => {
         <Route exact path="/" element={<Homepage />} />
         <Route exact path="/about" element={<Aboutpage />} />
         <Route exact path="/galery" element={<Galerypage />} />
+        <Route exact path="/contact" element={<Contactpage />} />
         <Route exact path="/shop" element={<Shoppage />} />
         <Route exact path="/shop/product" element={<Productpage />} />
         <Route exact path="/shop/login" element={<Loginpage />} />
