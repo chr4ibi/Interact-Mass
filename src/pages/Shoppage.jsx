@@ -14,7 +14,7 @@ import ShopNavbar from "../components/ShopNavbar";
 const Shoppage = () => {
   return (
     <ShopContainer>
-      <ShopNavbar dark={true} backPath="/"/>
+      <ShopNavbar btnBlue={true} dark={true} backPath="/"/>
       <ShopSection>
         <ShopWrapper>
           <Fade top>
@@ -49,6 +49,7 @@ const ShopContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fff;
 `;
 
 const ShopSection = styled.div`

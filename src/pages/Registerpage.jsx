@@ -13,7 +13,7 @@ import ActionButton from "../components/ActionButton";
 const Registerpage = () => {
   return (
     <Container>
-      <ShopNavbar dark={false} backPath="/shop"/>
+      <ShopNavbar dark={false} backPath="/shop" btnBlue={false} />
       <Wrapper>
         <Title>Create an account</Title>
         <Separator />
@@ -35,7 +35,7 @@ const Registerpage = () => {
             <PasswordIcon></PasswordIcon>
             <Input placeholder="Confirm Password" />
           </PasswordSection>
-          <ActionButton text="REGISTER" blue={true} />
+          <ActionButton text="REGISTER" blue={false} />
         </Form>
       </Wrapper>
     </Container>
@@ -48,25 +48,25 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgb(1, 55, 80);
-  background: linear-gradient(
-    90deg,
-    rgba(1, 55, 80, 1) 2%,
-    rgba(100, 169, 233, 1) 100%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: #0070f3;
 `;
 
 const Wrapper = styled.div`
   padding: 20px;
-  background-color: rgba(255, 255, 255, 1);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 90%;
   margin-top: 150px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 `;
+
 const Title = styled.form`
   font-size: 28px;
   font-weight: bold;
@@ -90,9 +90,20 @@ const FirstName = styled.input`
   font-size: 16px;
   padding: 5px;
   margin: 10px;
+  border-radius: 4px;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
 
   @media screen and (max-width: 500px) {
     width: 120px;
+  }
+
+  &:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #000;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
   }
 `;
 
@@ -102,9 +113,20 @@ const LastName = styled.input`
   font-size: 16px;
   padding: 5px;
   margin: 10px;
+  border-radius: 4px;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
 
   @media screen and (max-width: 500px) {
     width: 120px;
+  }
+
+  &:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #000;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
   }
 `;
 
@@ -136,10 +158,41 @@ const Input = styled.input`
   font-size: 16px;
   padding: 5px;
   margin: 10px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 4px;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+
+  &:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #000;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+  }
 
   @media screen and (max-width: 500px) {
     width: 260px;
   }
 `;
+
+// padding: 6px 12px;
+// font-size: 16px;
+// font-weight: 400;
+// line-height: 1.5;
+// color: #212529;
+// background-color: #fff;
+//
+// border: 1px solid #ced4da;
+// appearance: none;
+// border-radius: 4px;
+// transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+// :focus{
+//     color: #212529;
+//     background-color: #fff;
+//     border-color: #86b7fe;
+//     outline: 0;
+//     box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+// }
 
 export default Registerpage;

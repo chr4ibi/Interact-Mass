@@ -14,7 +14,7 @@ import ShopNavbar from "../components/ShopNavbar";
 const Loginpage = () => {
   return (
     <Container>
-      <ShopNavbar dark={false} backPath="/shop"/>
+      <ShopNavbar dark={true} backPath="/shop"/>
       <Wrapper>
         <Title>Login to your account</Title>
         <Separator />
@@ -42,13 +42,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgb(1, 55, 80);
-  background: linear-gradient(
-    90deg,
-    rgba(1, 55, 80, 1) 2%,
-    rgba(100, 169, 233, 1) 100%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: #eee;
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(1, 55, 80, 1) 2%,
+  //   rgba(100, 169, 233, 1) 100%,
+  //   rgba(0, 212, 255, 1) 100%
+  // );
 `;
 
 const Wrapper = styled.div`
@@ -60,6 +60,7 @@ const Wrapper = styled.div`
   align-items: center;
   max-width: 90%;
   margin-top: 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 `;
 const Title = styled.form`
   font-size: 28px;

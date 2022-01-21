@@ -12,7 +12,7 @@ const ButtonContainer = styled.button`
   cursor: pointer;
   border: none;
   padding: 0 56px;
-  margin: 10px 0px;
+  margin: 20px 0px;
   height: 45px;
   line-height: 45px;
   border-radius: 7px;

@@ -1,19 +1,19 @@
 // Import libraries
 import React from "react";
 import styled from "styled-components";
-import Fade from 'react-reveal/Fade'
+import Fade from "react-reveal/Fade";
 
 const MemberCard = ({ profilePic, name, role }) => {
   return (
     <CardContainer>
       <Fade bottom>
-      <CardImgWrap>
-        <CardImg src={profilePic}></CardImg>
-        <CardOverlay>
-          <CardName>{name}</CardName>
-        </CardOverlay>
-      </CardImgWrap>
-      <CardTitle>{role}</CardTitle>
+        <CardImgWrap>
+          <CardImg src={profilePic}></CardImg>
+          <CardOverlay>
+            <CardName>{name}</CardName>
+          </CardOverlay>
+        </CardImgWrap>
+        <CardTitle>{role}</CardTitle>
       </Fade>
     </CardContainer>
   );
@@ -32,8 +32,8 @@ const CardOverlay = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
-  width: 100%;
+  width: 150px;
+  height: 150px;
   opacity: 0;
   transition: 0.5s ease;
   background-color: #303030;
@@ -44,10 +44,8 @@ const CardOverlay = styled.div`
 `;
 
 const CardImgWrap = styled.div`
-  width: 150px;
   position: relative;
   cursor: pointer;
-  border-radius: 1000px;
 
   &:hover ${CardOverlay} {
     opacity: 0.6;
@@ -55,9 +53,10 @@ const CardImgWrap = styled.div`
 `;
 
 const CardImg = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 150px;
+  height: 150px;
   border-radius: 1000px;
+  border: 1px solid #0070f3;
 `;
 
 const CardTitle = styled.h1`
@@ -66,6 +65,8 @@ const CardTitle = styled.h1`
   font-weight: 400;
   margin: 15px 0px;
   color: #0070f3;
+
+  z-index: 1000;
 `;
 
 const CardName = styled.h1`

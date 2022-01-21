@@ -31,6 +31,7 @@ const CardContainer = styled(LinkR)`
   flex-direction: column;
   text-decoration: none;
   color: #000;
+  background-color: rgba(255, 255, 255, 0.3);
 
   &:hover {
     transform: scale(1.05);

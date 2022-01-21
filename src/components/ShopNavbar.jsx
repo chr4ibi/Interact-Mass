@@ -7,11 +7,11 @@ import styled from "styled-components"
 // Import components
 import LinkButton from './LinkButton'
 
-const ShopNavbar = ({ dark, backPath }) => {
+const ShopNavbar = ({ dark, backPath, btnBlue }) => {
   return (
     <Navbar>
       <Menu>
-        <LinkButton blue={true} to={backPath} text='GO BACK'/>
+        <LinkButton blue={btnBlue} to={backPath} text='GO BACK'/>
         <Buttons>
           <BasketValue dark={dark}>0 MAD</BasketValue>
           <ShoppingCartButton to="/shop/cart">
