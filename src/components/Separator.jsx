@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-const Separator = () => {
-  return <SeparatorContainer></SeparatorContainer>;
+const Separator = ({ blue }) => {
+  return <SeparatorContainer blue={blue}></SeparatorContainer>;
 };
 
 const SeparatorContainer = styled.div`
-  background: #0070f3;
+  background: ${props => props.blue ? "#0070f3" : "#fff"};
   width: 100px;
   height: 10px;
   border-radius: 90px;
   margin-bottom: 20px;
-  opacity: 0.6;
+  opacity: 0.8;
 `;
 
 export default Separator;

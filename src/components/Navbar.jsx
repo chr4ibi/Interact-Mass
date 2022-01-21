@@ -169,7 +169,7 @@ const NavShopLink = styled(LinkR)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({ scrollNav }) => (scrollNav ? "#000" : "#64A9E9")};
+    background: ${({ scrollNav }) => (scrollNav ? "#000" : "#0070f3")};
     color: #fff;
   }
 `;
@@ -178,9 +178,10 @@ const NavDonateLink = styled(LinkR)`
   font-size: 16px;
   color: ${({ isBlack }) => (isBlack ? ({ scrollNav }) => (scrollNav ? "#fff" : "#000") : "#fff")};
   text-decoration: underline;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: ${({ scrollNav }) => (scrollNav ? "#000" : "#64A9E9")};
+    color: ${({ scrollNav }) => (scrollNav ? "#000" : "#0070f3")};
   }
 `
 

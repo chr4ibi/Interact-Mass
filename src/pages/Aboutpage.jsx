@@ -41,14 +41,14 @@ const Aboutpage = () => {
           <AboutTitle>
             Our <Blue>Values</Blue>
           </AboutTitle>
-          <Separator />
+          <Separator blue={true}/>
           </Fade>
           <AboutContent isImageFirst={false} />
           <Fade>
           <AboutTitle>
             Our <Blue>Mission</Blue>
           </AboutTitle>
-          <Separator />
+          <Separator blue={true}/>
           </Fade>
           <AboutContent isImageFirst={true} />
         </AboutWrapper>
@@ -60,7 +60,7 @@ const Aboutpage = () => {
             <AboutTitle>
               Meet Our <Blue>Team</Blue>
             </AboutTitle>
-            <Separator />
+            <Separator blue={true}/>
           </Fade>
           <MemberCards>
             {memberList.map((e) => {

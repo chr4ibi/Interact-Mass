@@ -56,7 +56,6 @@ const CardImg = styled.img`
   width: 150px;
   height: 150px;
   border-radius: 1000px;
-  border: 1px solid #0070f3;
 `;
 
 const CardTitle = styled.h1`

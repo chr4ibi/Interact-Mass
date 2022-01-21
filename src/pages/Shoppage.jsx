@@ -21,7 +21,7 @@ const Shoppage = () => {
             <ShopTitle>
               Our <Blue>Products</Blue>
             </ShopTitle>
-            <Separator />
+            <Separator blue={true}/>
           </Fade>
           <ShopProducts>
             {productList.map((e) => {

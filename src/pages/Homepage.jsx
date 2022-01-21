@@ -46,7 +46,7 @@ const Homepage = () => {
           <Fade right>
             <AboutContent>
               <AboutTitle>Who we are</AboutTitle>
-              <Separator />
+              <Separator blue={true}/>
               <AboutParagraph>
                 Lorem ipsum <Highlight>dolor</Highlight> sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -66,7 +66,7 @@ const Homepage = () => {
         <ActionWrapper>
           <Fade top>
             <ActionTitle>What we do</ActionTitle>
-            <Separator />
+            <Separator blue={true}/>
           </Fade>
           <ActionContent>
             <Fade left>
@@ -110,7 +110,7 @@ const Homepage = () => {
           <Fade left>
             <ShopContent>
               <ShopTitle>How you can help</ShopTitle>
-              <Separator />
+              <Separator blue={true}/>
               <ShopParagraph>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

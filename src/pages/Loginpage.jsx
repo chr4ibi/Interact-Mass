@@ -14,10 +14,10 @@ import ShopNavbar from "../components/ShopNavbar";
 const Loginpage = () => {
   return (
     <Container>
-      <ShopNavbar dark={true} backPath="/shop"/>
+      <ShopNavbar dark={true} backPath="/shop" btnBlue={true}/>
       <Wrapper>
         <Title>Login to your account</Title>
-        <Separator />
+        <Separator blue={true}/>
         <Form>
           <EmailSection>
             <EmailIcon></EmailIcon>
