@@ -44,7 +44,7 @@ const Registerpage = () => {
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,6 +65,10 @@ const Wrapper = styled.div`
   -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+
+  @media screen and (max-width: 500px){
+    margin-top: 50px;
+  }
 `;
 
 const Title = styled.form`

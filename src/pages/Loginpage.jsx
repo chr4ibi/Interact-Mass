@@ -1,23 +1,22 @@
 // Import libraries
 import React from "react";
 import styled from "styled-components";
-import { Link as LinkR } from 'react-router-dom'
+import { Link as LinkR } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
 
 // Import components
 import Separator from "../components/Separator";
-import ActionButton from '../components/ActionButton'
+import ActionButton from "../components/ActionButton";
 import ShopNavbar from "../components/ShopNavbar";
-
 
 const Loginpage = () => {
   return (
     <Container>
-      <ShopNavbar dark={true} backPath="/shop" btnBlue={true}/>
+      <ShopNavbar dark={true} backPath="/shop" btnBlue={true} />
       <Wrapper>
         <Title>Login to your account</Title>
-        <Separator blue={true}/>
+        <Separator blue={true} />
         <Form>
           <EmailSection>
             <EmailIcon></EmailIcon>
@@ -28,8 +27,8 @@ const Loginpage = () => {
             <Input placeholder="Password" />
           </PasswordSection>
           <ActionButton text="LOGIN" blue={true} />
-          <Link to='/shop/register'>DON'T YOU REMEMBER THE PASSWORD ?</Link>
-          <Link to='/shop/register'>CREATE A NEW ACCOUNT</Link>
+          <Link to="/shop/register">DON'T YOU REMEMBER THE PASSWORD ?</Link>
+          <Link to="/shop/register">CREATE A NEW ACCOUNT</Link>
         </Form>
       </Wrapper>
     </Container>
@@ -38,17 +37,11 @@ const Loginpage = () => {
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #eee;
-  // background: linear-gradient(
-  //   90deg,
-  //   rgba(1, 55, 80, 1) 2%,
-  //   rgba(100, 169, 233, 1) 100%,
-  //   rgba(0, 212, 255, 1) 100%
-  // );
 `;
 
 const Wrapper = styled.div`
@@ -59,13 +52,18 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 90%;
-  margin-top: 150px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 150px;
+
+  @media screen and (max-width: 500px){
+    margin-top: 50px;
+  }
 `;
 const Title = styled.form`
   font-size: 28px;
   font-weight: bold;
   margin: 10px 0px;
+  text-align: center;
 `;
 
 const Form = styled.div`
@@ -98,6 +96,18 @@ const Input = styled.input`
   font-size: 16px;
   padding: 5px;
   margin: 10px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 4px;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+
+  &:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #000;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+  }
 
   @media screen and (max-width: 500px) {
     width: 260px;
@@ -112,6 +122,6 @@ const Link = styled(LinkR)`
   &:hover {
     text-decoration: underline;
   }
-`
+`;
 
 export default Loginpage;

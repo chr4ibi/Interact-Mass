@@ -12,7 +12,7 @@ import img from "../assets/images/brownsweat1.jpeg";
 const Productpage = () => {
   return (
     <ProductContainer>
-      <ShopNavbar dark={true} backPath="/shop" />
+      <ShopNavbar dark={true} backPath="/shop" btnBlue={true} />
       <ProductSection>
         <ProductWrapper>
           <ProductImages>
