@@ -9,7 +9,7 @@ import { FaInstagram, FaTwitter, FaFacebook, FaTiktok } from "react-icons/fa";
 // Import components
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
-import ActionButton from '../components/ActionButton'
+import ActionButton from "../components/ActionButton";
 
 const Contactpage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,25 +55,25 @@ const Contactpage = () => {
           <ContactForm>
             <FormInput>
               <Text>First Name</Text>
-              <Input placeholder='Ex : John'></Input>
+              <Input placeholder="Ex : John"></Input>
             </FormInput>
             <FormInput>
               <Text>Last Name</Text>
-              <Input placeholder='Ex : Smith'></Input>
+              <Input placeholder="Ex : Smith"></Input>
             </FormInput>
             <FormInput>
               <Text>Phone Number</Text>
-              <Input placeholder='Ex : 06 00 00 00 00'></Input>
+              <Input placeholder="Ex : 06 00 00 00 00"></Input>
             </FormInput>
             <FormInput>
               <Text>Email Adress</Text>
-              <Input placeholder='Ex : johnsmith@gmail.com'></Input>
+              <Input placeholder="Ex : johnsmith@gmail.com"></Input>
             </FormInput>
             <MessageInput>
               <Text>Message</Text>
-              <Input placeholder='Ex : Hello ! is Interact Mass still recruiting members ? '></Input>
+              <Input placeholder="Ex : Hello ! is Interact Mass still recruiting members ? "></Input>
             </MessageInput>
-            <ActionButton blue={true} text='SUBMIT MESSAGE'></ActionButton>
+            <ActionButton blue={true} text="SUBMIT MESSAGE"></ActionButton>
           </ContactForm>
         </ContactSection>
       </ContactWrapper>
@@ -121,7 +121,7 @@ const ContactSection = styled.div`
   background: #fff;
   padding: 10px;
 
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 800px) {
     flex-direction: column;
   }
 `;
@@ -135,11 +135,14 @@ const ContactInfo = styled.div`
   width: 100%;
   max-width: 400px;
 
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 800px) {
     max-width: 800px;
+    
   }
 
-
+  @media screen and (max-width: 400px){
+    padding: 30px 20px;
+  }
 `;
 
 const ContactInfoTitle = styled.h1`
@@ -147,7 +150,7 @@ const ContactInfoTitle = styled.h1`
   font-size: 28px;
   font-weight: 500;
 
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 800px) {
     font-size: 24px;
   }
 `;
@@ -282,6 +285,10 @@ const ContactForm = styled.div`
   flex-wrap: wrap;
   width: 100%;
   max-width: 800px;
+
+  @media screen and (max-width: 400px){
+    padding: 30px 20px;
+  }
 `;
 
 const FormInput = styled.div`
@@ -294,7 +301,7 @@ const MessageInput = styled.div`
   margin: 10px;
   width: 100%;
   max-width: 620px;
-`
+`;
 
 const Text = styled.p`
   color: #0070f3;
@@ -302,9 +309,9 @@ const Text = styled.p`
 
 const Input = styled.input`
   border: none;
-  border-bottom: 1px solid #D3D3D3;
+  border-bottom: 1px solid #d3d3d3;
   padding: 10px 0px;
-  font-size: 16px; 
+  font-size: 16px;
   width: 100%;
 
   &:focus {
@@ -312,7 +319,6 @@ const Input = styled.input`
     border-bottom: 2px solid #0070f3;
     transition: 0.2s;
   }
-
 `;
 
 export default Contactpage;
