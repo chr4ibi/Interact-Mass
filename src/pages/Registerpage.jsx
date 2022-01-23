@@ -5,6 +5,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
 import ShopNavbar from "../components/ShopNavbar";
+import { Link as LinkR } from 'react-router-dom'
 
 // Import components
 import Separator from "../components/Separator";
@@ -13,10 +14,10 @@ import ActionButton from "../components/ActionButton";
 const Registerpage = () => {
   return (
     <Container>
-      <ShopNavbar dark={false} backPath="/shop" btnBlue={false} />
+      <ShopNavbar dark={true} backPath="/shop" btnBlue={true} />
       <Wrapper>
         <Title>Create an account</Title>
-        <Separator />
+        <Separator blue={true}/>
         <Form>
           <NameInputs>
             <NameIcon></NameIcon>
@@ -35,7 +36,8 @@ const Registerpage = () => {
             <PasswordIcon></PasswordIcon>
             <Input placeholder="Confirm Password" />
           </PasswordSection>
-          <ActionButton text="REGISTER" blue={false} />
+          <ActionButton text="REGISTER" blue={true} />
+          <Link to="/shop/login">ALREADY HAVE AN ACCOUNT ?</Link>
         </Form>
       </Wrapper>
     </Container>
@@ -48,7 +50,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #0070f3;
+  background: #fdfdfd;
 `;
 
 const Wrapper = styled.div`
@@ -59,10 +61,8 @@ const Wrapper = styled.div`
   align-items: center;
   max-width: 90%;
   margin-top: 150px;
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(20px);
+  background: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 
@@ -177,6 +177,16 @@ const Input = styled.input`
 
   @media screen and (max-width: 500px) {
     width: 260px;
+  }
+`;
+
+const Link = styled(LinkR)`
+  color: #000;
+  text-decoration: none;
+  margin: 5px 0px;
+
+  &:hover {
+    text-decoration: underline;
   }
 `;
 

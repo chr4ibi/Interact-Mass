@@ -83,6 +83,7 @@ const Aboutpage = () => {
 const AboutContainer = styled.div`
   width: 100%;
   min-height: 100vh;
+  background: #fdfdfd;
 `;
 
 const AboutSection = styled.div`

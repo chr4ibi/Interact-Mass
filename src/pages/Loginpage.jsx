@@ -41,7 +41,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #eee;
+  background: #fdfdfd;
 `;
 
 const Wrapper = styled.div`

@@ -35,7 +35,7 @@ const Homepage = () => {
             <HeroContent>
               <HeroTitle>Interact Mass</HeroTitle>
               <HeroDesc>Together for a better world</HeroDesc>
-              <LinkButton to='/' blue={true} text="READ MORE" />
+              <LinkButton to='/' blue={true} text="DISCOVER" />
             </HeroContent>
           </Fade>
         </HeroWrapper>
@@ -135,6 +135,7 @@ const Homepage = () => {
 const HomeContainer = styled.div`
   width: 100%;
   min-height: 100vh;
+  background: #fdfdfd;
 `;
 
 const HeroSection = styled.div`

@@ -1,3 +1,5 @@
+background grey : #fdfdfd
 blue : #0070f3
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
+title font sizes :  32px to 28px
+desc & paragraphs font sizes : 16px
