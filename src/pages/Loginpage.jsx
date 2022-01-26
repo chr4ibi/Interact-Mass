@@ -53,7 +53,7 @@ const Wrapper = styled.div`
   align-items: center;
   max-width: 90%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-top: 150px;
+  margin: 150px;
 
   @media screen and (max-width: 500px){
     margin-top: 50px;
