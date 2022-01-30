@@ -3,8 +3,8 @@ import React from "react";
 import styled from "styled-components";
 import {Link as LinkR} from 'react-router-dom'
 
-const Button = ({ text, blue, to }) => {
-  return <ButtonContainer to={to} blue={blue}>{text}</ButtonContainer>;
+const Button = ({ text, blue, to, sideMargin }) => {
+  return <ButtonContainer to={to} blue={blue} sideMargin={sideMargin}>{text}</ButtonContainer>;
 };
 
 const ButtonContainer = styled(LinkR)`
@@ -14,6 +14,7 @@ const ButtonContainer = styled(LinkR)`
   border: none;
   padding: 0 56px;
   margin: 10px 0px;
+  margin-right: ${props => props.sideMargin ? "20px" : "0px"};
   height: 45px;
   line-height: 45px;
   border-radius: 7px;
@@ -28,7 +29,11 @@ const ButtonContainer = styled(LinkR)`
   &:hover {
     background: ${(props) => props.blue ? "rgba(0, 118, 255, 0.9)" : "rgba(255,255,255,0.9)"};
     box-shadow: ${(props) => props.blue ? "0 6px 20px rgb(0 118 255 / 23%)" : "0 6px 20px rgb(93 93 93 / 23%)"};
-  }
+  };
+
+  @media screen and (max-width: 1200px){
+    margin-right: 0px;
+  };
 
   @media screen and (max-width: 600px){
     padding: 0 24px;

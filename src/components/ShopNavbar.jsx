@@ -16,6 +16,7 @@ const ShopNavbar = ({ dark, backPath, btnBlue }) => {
           <BasketValue dark={dark}>0 MAD</BasketValue>
           <ShoppingCartButton to="/shop/cart">
             <ShoppingCartIcon dark={dark}></ShoppingCartIcon>
+            <ShoppingCartBadge>3</ShoppingCartBadge>
           </ShoppingCartButton>
           <LoginButton to="/shop/login" dark={dark}>Login</LoginButton>
           <RegisterButton to="/shop/register" dark={dark}>Register</RegisterButton>
@@ -66,6 +67,22 @@ const ShoppingCartButton = styled(LinkR)`
   display: flex;
   align-items: center;
 `;
+
+const ShoppingCartBadge = styled.span`
+  position: absolute;
+  border-radius: 10000px;
+  background: #0070f3;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-left: 30px;
+  margin-bottom: 20px;
+
+
+`
 
 const ShoppingCartIcon = styled(AiOutlineShoppingCart)`
   font-size: 32px;

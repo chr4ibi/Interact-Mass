@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { MdLocationPin } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaInstagram, FaTwitter, FaFacebook, FaTiktok } from "react-icons/fa";
+import Fade from "react-reveal/Fade";
 
 // Import components
 import Navbar from "../components/Navbar";
@@ -22,10 +23,13 @@ const Contactpage = () => {
       <Navbar toggle={toggle} isBlack={true} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <ContactWrapper>
+        <Fade top>
         <ContactTitle>Contact Us</ContactTitle>
         <ContactSubtitle>
           Any question or remarks ? Just write us a message !
         </ContactSubtitle>
+        </Fade>
+        <Fade>
         <ContactSection>
           <ContactInfo>
             <ContactInfoTitle>Contact Information</ContactInfoTitle>
@@ -76,6 +80,7 @@ const Contactpage = () => {
             <ActionButton blue={true} text="SUBMIT MESSAGE"></ActionButton>
           </ContactForm>
         </ContactSection>
+        </Fade>
       </ContactWrapper>
     </ContactContainer>
   );

@@ -6,14 +6,10 @@ import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Aboutpage from "./pages/Aboutpage";
 import Galerypage from "./pages/Galerypage";
-import Shoppage from "./pages/Shoppage";
 import ScrollToTop from "./components/ScrollToTop";
 import Errorpage from "./pages/Errorpage";
-import Productpage from "./pages/Productpage";
-import Loginpage from "./pages/Loginpage";
-import Registerpage from "./pages/Registerpage";
-import Cartpage from "./pages/Cartpage";
 import Contactpage from "./pages/Contactpage";
+import ComingSoon from "./pages/ComingSoon";
 
 // Import assets
 import "./App.css";
@@ -27,11 +23,12 @@ const App = () => {
         <Route exact path="/about" element={<Aboutpage />} />
         <Route exact path="/galery" element={<Galerypage />} />
         <Route exact path="/contact" element={<Contactpage />} />
-        <Route exact path="/shop" element={<Shoppage />} />
-        <Route exact path="/shop/product" element={<Productpage />} />
-        <Route exact path="/shop/login" element={<Loginpage />} />
-        <Route exact path="/shop/register" element={<Registerpage />} />
-        <Route exact path="/shop/cart" element={<Cartpage />} />
+        <Route exact path="/shop" element={<ComingSoon />} />
+        <Route exact path="/shop/product" element={<ComingSoon />} />
+        <Route exact path="/shop/login" element={<ComingSoon />} />
+        <Route exact path="/shop/register" element={<ComingSoon />} />
+        <Route exact path="/shop/cart" element={<ComingSoon />} />
+        <Route exact path="/donate" element={<ComingSoon />} />
         <Route path="*" element={<Errorpage />}/>
       </Routes>
     </ScrollToTop>

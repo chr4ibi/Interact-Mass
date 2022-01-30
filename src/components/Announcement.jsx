@@ -1,0 +1,9 @@
+// Import libraries
+import React from 'react';
+import styled from 'styled-components'
+
+const Announcement = () => {
+  return <div></div>;
+};
+
+export default Announcement;

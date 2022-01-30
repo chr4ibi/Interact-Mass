@@ -1,11 +1,14 @@
 // Import libraries
 import React from "react";
 import styled from "styled-components";
-import { Link as LinkR } from "react-router-dom";
 import Fade from "react-reveal/Fade";
+
+// Import components
+import Button from "../components/LinkButton";
 
 // Import assets
 import errorImg from "../assets/illustrations/404error.svg";
+
 
 const Errorpage = () => {
   return (
@@ -20,8 +23,8 @@ const Errorpage = () => {
               report a problem.
             </ErrorSubtitle>
             <ErrorButtons>
-              <ErrorButton to="/">VISIT HOME</ErrorButton>
-              <ErrorButton to="/contact">REPORT PROBLEM</ErrorButton>
+              <Button text='VISIT HOME' to='/' blue={true} sideMargin={true}/>
+              <Button text='REPORT A PROBLEM' to='/contact' blue={true}/>
             </ErrorButtons>
           </ErrorContent>
         </Fade>
@@ -102,29 +105,13 @@ const ErrorSubtitle = styled.h2`
 `;
 
 const ErrorButtons = styled.div`
-  margin: 10px 0px;
+  display: flex;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1200px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
-`;
-
-const ErrorButton = styled(LinkR)`
-  border: none;
-  background-color: #64a9e9;
-  padding: 10px 40px;
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-  cursor: pointer;
-  margin-right: 20px;
-  text-align: center;
-
-  @media screen and (max-width: 500px) {
-    margin: 10px 0px;
-  }
-}
 `;
 
 export default Errorpage;

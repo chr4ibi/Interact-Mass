@@ -61,7 +61,7 @@ const ShopSection = styled.div`
 
 const ShopWrapper = styled.div`
   width: 90%;
-  margin: 50px;
+  margin: 50px 0px;
   display: flex;
   align-items: center;
   flex-direction: column;
