@@ -2,8 +2,8 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = ({ text, blue }) => {
-  return <ButtonContainer blue={blue}>{text}</ButtonContainer>;
+const Button = ({ text, blue, onClick }) => {
+  return <ButtonContainer blue={blue} onClick={onClick}>{text}</ButtonContainer>;
 };
 
 const ButtonContainer = styled.button`

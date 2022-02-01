@@ -1,85 +1,135 @@
 // Import libraries
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { MdEmail } from "react-icons/md";
 import { MdLocationPin } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaInstagram, FaTwitter, FaFacebook, FaTiktok } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
+import emailjs from "emailjs-com";
+import { AiOutlineCheck } from 'react-icons/ai'
 
 // Import components
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
-import ActionButton from "../components/ActionButton";
 
 const Contactpage = () => {
+  const form = useRef();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const [result, setResult] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_jrf38ml",
+        "template_0mtixxs",
+        form.current,
+        "user_Toch6XeJaR03txPoQpD6c"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setResult(true)
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <ContactContainer>
       <Navbar toggle={toggle} isBlack={true} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <ContactWrapper>
         <Fade top>
-        <ContactTitle>Contact Us</ContactTitle>
-        <ContactSubtitle>
-          Any question or remarks ? Just write us a message !
-        </ContactSubtitle>
+          <ContactTitle>Contact Us</ContactTitle>
+          <ContactSubtitle>
+            Any question or remarks ? Just write us a message !
+          </ContactSubtitle>
         </Fade>
         <Fade>
-        <ContactSection>
-          <ContactInfo>
-            <ContactInfoTitle>Contact Information</ContactInfoTitle>
-            <ContactInfoDesc>
-              Fill up the form and our team will get back to you within 24
-              hours.
-            </ContactInfoDesc>
-            <PhoneNumber>
-              <PhoneIcon></PhoneIcon>
-              <PhoneText>06 27 00 00 66</PhoneText>
-            </PhoneNumber>
-            <Email>
-              <EmailIcon></EmailIcon>
-              <EmailText>chraibialipro@gmail.com</EmailText>
-            </Email>
-            <Adress>
-              <AdressIcon></AdressIcon>
-              <AdressText>Casablanca - Morocco</AdressText>
-            </Adress>
-            <SocialMedias>
-              <InstagramIcon></InstagramIcon>
-              <TwitterIcon></TwitterIcon>
-              <FacebookIcon></FacebookIcon>
-              <TiktokIcon></TiktokIcon>
-            </SocialMedias>
-          </ContactInfo>
-          <ContactForm>
-            <FormInput>
-              <Text>First Name</Text>
-              <Input placeholder="Ex : John"></Input>
-            </FormInput>
-            <FormInput>
-              <Text>Last Name</Text>
-              <Input placeholder="Ex : Smith"></Input>
-            </FormInput>
-            <FormInput>
-              <Text>Phone Number</Text>
-              <Input placeholder="Ex : 06 00 00 00 00"></Input>
-            </FormInput>
-            <FormInput>
-              <Text>Email Adress</Text>
-              <Input placeholder="Ex : johnsmith@gmail.com"></Input>
-            </FormInput>
-            <MessageInput>
-              <Text>Message</Text>
-              <Input placeholder="Ex : Hello ! is Interact Mass still recruiting members ? "></Input>
-            </MessageInput>
-            <ActionButton blue={true} text="SUBMIT MESSAGE"></ActionButton>
-          </ContactForm>
-        </ContactSection>
+          <ContactSection>
+            <ContactInfo>
+              <ContactInfoTitle>Contact Information</ContactInfoTitle>
+              <ContactInfoDesc>
+                Fill up the form and our team will get back to you within 24
+                hours.
+              </ContactInfoDesc>
+              <PhoneNumber>
+                <PhoneIcon></PhoneIcon>
+                <PhoneText>06 27 00 00 66</PhoneText>
+              </PhoneNumber>
+              <Email>
+                <EmailIcon></EmailIcon>
+                <EmailText>chraibialipro@gmail.com</EmailText>
+              </Email>
+              <Adress>
+                <AdressIcon></AdressIcon>
+                <AdressText>Casablanca - Morocco</AdressText>
+              </Adress>
+              <SocialMedias>
+                <InstagramIcon></InstagramIcon>
+                <TwitterIcon></TwitterIcon>
+                <FacebookIcon></FacebookIcon>
+                <TiktokIcon></TiktokIcon>
+              </SocialMedias>
+            </ContactInfo>
+            <ContactForm ref={form} onSubmit={sendEmail}>
+              <FormInput>
+                <Text>First Name</Text>
+                <Input
+                  placeholder="Ex : John"
+                  name="firstName"
+                  type="text"
+                  required
+                ></Input>
+              </FormInput>
+              <FormInput>
+                <Text>Last Name</Text>
+                <Input
+                  placeholder="Ex : Smith"
+                  name="lastName"
+                  type="text"
+                  required
+                ></Input>
+              </FormInput>
+              <FormInput>
+                <Text>Phone Number</Text>
+                <Input
+                  placeholder="Ex : 06 00 00 00 00"
+                  name="phone"
+                  type="text"
+                  required
+                ></Input>
+              </FormInput>
+              <FormInput>
+                <Text>Email Adress</Text>
+                <Input
+                  placeholder="Ex : johnsmith@gmail.com"
+                  name="email"
+                  required
+                ></Input>
+              </FormInput>
+              <MessageInput>
+                <Text>Message</Text>
+                <Input
+                  placeholder="Ex : Hello ! is Interact Mass still recruiting members ? "
+                  name="message"
+                  required
+                ></Input>
+              </MessageInput>
+              <SubmitButton type="submit" value="SUBMIT MESSAGE"></SubmitButton>
+              { result ? <SuccessMessage><CheckIcon />Your message has been sent. We'll come back to you in the next 24 hours.</SuccessMessage> : null }
+            </ContactForm>
+          </ContactSection>
         </Fade>
       </ContactWrapper>
     </ContactContainer>
@@ -143,10 +193,9 @@ const ContactInfo = styled.div`
 
   @media screen and (max-width: 800px) {
     max-width: 800px;
-    
   }
 
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 400px) {
     padding: 30px 20px;
   }
 `;
@@ -284,7 +333,7 @@ const TiktokIcon = styled(FaTiktok)`
   }
 `;
 
-const ContactForm = styled.div`
+const ContactForm = styled.form`
   border-radius: 15px;
   padding: 40px;
   display: flex;
@@ -292,7 +341,7 @@ const ContactForm = styled.div`
   width: 100%;
   max-width: 800px;
 
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 400px) {
     padding: 30px 20px;
   }
 `;
@@ -326,5 +375,52 @@ const Input = styled.input`
     transition: 0.2s;
   }
 `;
+
+const SubmitButton = styled.input`
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: none;
+  padding: 0 56px;
+  margin: 20px 0px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 7px;
+  background-color: #0070f3;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: rgba(0, 118, 255, 0.9);
+    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0 24px;
+  }
+`;
+
+const SuccessMessage = styled.div`
+  color: #270;
+  background-color: #dff2bf;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+`;
+
+const CheckIcon = styled(AiOutlineCheck)`
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0px 10px;
+`
+
+
 
 export default Contactpage;
