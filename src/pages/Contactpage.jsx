@@ -126,7 +126,7 @@ const Contactpage = () => {
                   required
                 ></Input>
               </MessageInput>
-              <SubmitButton type="submit" value="SUBMIT MESSAGE"></SubmitButton>
+              <SubmitButton />
               { result ? <SuccessMessage><CheckIcon />Your message has been sent. We'll come back to you in the next 24 hours.</SuccessMessage> : null }
             </ContactForm>
           </ContactSection>
@@ -376,7 +376,10 @@ const Input = styled.input`
   }
 `;
 
-const SubmitButton = styled.input`
+const SubmitButton = styled.input.attrs({
+  type: 'submit',
+  value:'SUBMIT MESSAGE',
+})`
   display: inline-block;
   outline: 0;
   cursor: pointer;
@@ -419,6 +422,10 @@ const CheckIcon = styled(AiOutlineCheck)`
   font-size: 25px;
   font-weight: bold;
   margin: 0px 10px;
+
+  @media screen and (max-width: 1200px){
+    display: none;
+  }
 `
 
 
