@@ -29,6 +29,11 @@ const Sidebar = ({ isOpen, toggle }) => {
             Shop
           </SidebarRoute>
         </SideBtnWrap>
+        <SideBtnWrap>
+          <SidebarRoute to='/donate'>
+            Donate
+          </SidebarRoute>
+        </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
   );
@@ -97,6 +102,7 @@ export const SidebarLink = styled(LinkR)`
 export const SideBtnWrap = styled.div`
   display: flex;
   justify-content: center;
+  margin: 20px;
 `;
 
 export const SidebarRoute = styled(LinkR)`

@@ -35,7 +35,7 @@ const Homepage = () => {
             <HeroContent>
               <HeroTitle>Interact Mass</HeroTitle>
               <HeroDesc>Together for a better world</HeroDesc>
-              <LinkButton to='/' blue={true} text="DISCOVER" />
+              <LinkButton to="/about" blue={true} text="DISCOVER" />
             </HeroContent>
           </Fade>
         </HeroWrapper>
@@ -46,18 +46,16 @@ const Homepage = () => {
           <Fade right>
             <AboutContent>
               <AboutTitle>Who we are</AboutTitle>
-              <Separator blue={true}/>
+              <Separator blue={true} />
               <AboutParagraph>
-                Lorem ipsum <Highlight>dolor</Highlight> sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                We are Interact Mass, a group of <Highlight>teenagers</Highlight> trying to make the
+                world a better place at our scale. We’re all from the same high
+                school and we do <Highlight>charity</Highlight> actions every week.
                 <br></br>
                 <br></br>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
+                Wanna know about us more in depth ? Discover our <Highlight>values</Highlight>, our <Highlight>goals</Highlight> and our <Highlight>team</Highlight> by clicking the button below.
               </AboutParagraph>
-              <LinkButton to='about' text="LEARN ABOUT US" blue={true} />
+              <LinkButton to="about" text="LEARN ABOUT US" blue={true} />
             </AboutContent>
           </Fade>
         </AboutWrapper>
@@ -66,42 +64,39 @@ const Homepage = () => {
         <ActionWrapper>
           <Fade top>
             <ActionTitle>What we do</ActionTitle>
-            <Separator blue={true}/>
+            <Separator blue={true} />
           </Fade>
           <ActionContent>
             <Fade left>
               <ActionCard>
                 <ActionCardImage1></ActionCardImage1>
-                <ActionCardTitle>Lorem Ipsum</ActionCardTitle>
+                <ActionCardTitle>Basket Distribution</ActionCardTitle>
                 <ActionCardDesc>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  We distribute baskets of <Highlight>first necessity products</Highlight> such as food, water, clothes, and other things to <Highlight>homeless people</Highlight>.
                 </ActionCardDesc>
               </ActionCard>
             </Fade>
             <Fade>
               <ActionCard>
                 <ActionCardImage2></ActionCardImage2>
-                <ActionCardTitle>Lorem Ipsum</ActionCardTitle>
+                <ActionCardTitle>Public Renovation</ActionCardTitle>
                 <ActionCardDesc>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Once a year, we collect money to <Highlight>renovate</Highlight> a moroccan <Highlight>public establishment</Highlight> in need such as schools, hospitals, etc...
                 </ActionCardDesc>
               </ActionCard>
             </Fade>
             <Fade right>
               <ActionCard>
                 <ActionCardImage3></ActionCardImage3>
-                <ActionCardTitle>Lorem Ipsum</ActionCardTitle>
+                <ActionCardTitle>Free Tutoring</ActionCardTitle>
                 <ActionCardDesc>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Every week, we give <Highlight>private classes</Highlight> to elementary students from the "Heure Joyeuse" organization who need help for their homework.
                 </ActionCardDesc>
               </ActionCard>
             </Fade>
           </ActionContent>
           <Fade bottom>
-            <LinkButton to='/galery'text="GO TO GALERY" blue={true} />
+            <LinkButton to="/galery" text="GO TO GALERY" blue={true} />
           </Fade>
         </ActionWrapper>
       </ActionSection>
@@ -110,18 +105,14 @@ const Homepage = () => {
           <Fade left>
             <ShopContent>
               <ShopTitle>How you can help</ShopTitle>
-              <Separator blue={true}/>
+              <Separator blue={true} />
               <ShopParagraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                You're at Louis Massignon high school and you want to join our organization ? Unfortunately, <Highlight>recruitements are closed</Highlight> for the moment but we encourage you to apply next year.
                 <br></br>
                 <br></br>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
+                If you don't want to join the organization but still want to <Highlight>engage yourself</Highlight>, you can help by <Highlight>donating money</Highlight> or <Highlight>buying our sweatshirts</Highlight>.
               </ShopParagraph>
-              <LinkButton to='/shop' text='GO TO SHOP' blue={true}/>
+              <LinkButton to="/shop" text="GO TO SHOP" blue={true} />
             </ShopContent>
           </Fade>
           <ShopImage></ShopImage>
@@ -261,13 +252,13 @@ const AboutTitle = styled.h1`
 const AboutParagraph = styled.p`
   text-align: justify;
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 18px;
 `;
 
 const Highlight = styled.span`
   font-weight: bold;
   color: #0070f3;
-`
+`;
 
 const ActionSection = styled.div`
   display: flex;
@@ -344,11 +335,12 @@ const ActionCardTitle = styled.h1`
   text-align: center;
   font-size: 24px;
   margin-top: 20px;
+  margin-bottom: 5px;
 `;
 
 const ActionCardDesc = styled.p`
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
 `;
 
 const ShopSection = styled.div`
@@ -391,7 +383,7 @@ const ShopTitle = styled.h1`
 const ShopParagraph = styled.p`
   text-align: justify;
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 18px;
 `;
 
 const ShopImage = styled.div`

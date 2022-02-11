@@ -7,7 +7,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaInstagram, FaTwitter, FaFacebook, FaTiktok } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
 import emailjs from "emailjs-com";
-import { AiOutlineCheck } from 'react-icons/ai'
+import { AiOutlineCheck } from "react-icons/ai";
 
 // Import components
 import Navbar from "../components/Navbar";
@@ -36,7 +36,8 @@ const Contactpage = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setResult(true)
+          setResult(true);
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);
@@ -65,21 +66,45 @@ const Contactpage = () => {
               </ContactInfoDesc>
               <PhoneNumber>
                 <PhoneIcon></PhoneIcon>
-                <PhoneText>06 27 00 00 66</PhoneText>
+                <PhoneText>+212 6 66 96 52 99</PhoneText>
               </PhoneNumber>
               <Email>
                 <EmailIcon></EmailIcon>
-                <EmailText>chraibialipro@gmail.com</EmailText>
+                <EmailText>interactmass@gmail.com</EmailText>
               </Email>
               <Adress>
                 <AdressIcon></AdressIcon>
                 <AdressText>Casablanca - Morocco</AdressText>
               </Adress>
               <SocialMedias>
-                <InstagramIcon></InstagramIcon>
+                <a
+                  href="https://www.instagram.com/interactmass/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <InstagramIcon></InstagramIcon>
+                </a>
+                <a
+                  href="https://www.instagram.com/interactmass/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                 <TwitterIcon></TwitterIcon>
+                </a>
+                <a
+                  href="https://www.instagram.com/interactmass/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                 <FacebookIcon></FacebookIcon>
-                <TiktokIcon></TiktokIcon>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@interactmass"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <TiktokIcon></TiktokIcon>
+                </a>
               </SocialMedias>
             </ContactInfo>
             <ContactForm ref={form} onSubmit={sendEmail}>
@@ -127,7 +152,13 @@ const Contactpage = () => {
                 ></Input>
               </MessageInput>
               <SubmitButton />
-              { result ? <SuccessMessage><CheckIcon />Your message has been sent. We'll come back to you in the next 24 hours.</SuccessMessage> : null }
+              {result ? (
+                <SuccessMessage>
+                  <CheckIcon />
+                  Your message has been sent. We'll come back to you in the next
+                  24 hours.
+                </SuccessMessage>
+              ) : null}
             </ContactForm>
           </ContactSection>
         </Fade>
@@ -377,8 +408,8 @@ const Input = styled.input`
 `;
 
 const SubmitButton = styled.input.attrs({
-  type: 'submit',
-  value:'SUBMIT MESSAGE',
+  type: "submit",
+  value: "SUBMIT MESSAGE",
 })`
   display: inline-block;
   outline: 0;
@@ -415,7 +446,6 @@ const SuccessMessage = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-
 `;
 
 const CheckIcon = styled(AiOutlineCheck)`
@@ -423,11 +453,9 @@ const CheckIcon = styled(AiOutlineCheck)`
   font-weight: bold;
   margin: 0px 10px;
 
-  @media screen and (max-width: 1200px){
+  @media screen and (max-width: 1200px) {
     display: none;
   }
-`
-
-
+`;
 
 export default Contactpage;
