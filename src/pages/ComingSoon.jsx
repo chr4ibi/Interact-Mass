@@ -5,27 +5,31 @@ import { keyframes } from "styled-components";
 import Fade from "react-reveal/Fade";
 
 // Import components
-import LinkButton from '../components/LinkButton'
+import LinkButton from "../components/LinkButton";
+import Announcement from "../components/Announcement";
 
 const ComingSoon = () => {
   return (
     <Container>
+      <Announcement />
       <Wrapper>
         <Fade top>
-        <Loader>
-          <InnerOne></InnerOne>
-          <InnerTwo></InnerTwo>
-          <InnerThree></InnerThree>
-        </Loader>
+          <Loader>
+            <InnerOne></InnerOne>
+            <InnerTwo></InnerTwo>
+            <InnerThree></InnerThree>
+          </Loader>
         </Fade>
         <Fade top>
-        <Title>COMING SOON</Title>
+          <Title>COMING SOON</Title>
         </Fade>
         <Fade bottom>
-        <Message>This section is still in production please come back later.</Message>
+          <Message>
+            This section is still in production please come back later.
+          </Message>
         </Fade>
         <Fade bottom>
-        <LinkButton blue={true} to='/' text='BACK HOME'/>
+          <LinkButton blue={true} to="/" text="BACK HOME" />
         </Fade>
       </Wrapper>
     </Container>
@@ -127,7 +131,6 @@ const Title = styled.h1`
   color: #0070f3;
   text-align: center;
   font-size: 32px;
-
 `;
 
 const Message = styled.p`
@@ -136,6 +139,9 @@ const Message = styled.p`
   color: #303030;
   margin-bottom: 10px;
 
+  @media screen and (max-width: 500px){
+    font-size: 22px;
+  }
 `;
 
 export default ComingSoon;

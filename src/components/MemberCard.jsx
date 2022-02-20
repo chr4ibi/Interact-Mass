@@ -24,6 +24,7 @@ const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 10px 20px;
+  width: 150px;
 `;
 
 const CardOverlay = styled.div`
@@ -34,13 +35,22 @@ const CardOverlay = styled.div`
   right: 0;
   width: 150px;
   height: 150px;
-  opacity: 0;
   transition: 0.5s ease;
-  background-color: #303030;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 1000px;
+  z-index: 1000;
+`;
+
+const CardName = styled.h1`
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s ease;
 `;
 
 const CardImgWrap = styled.div`
@@ -48,7 +58,11 @@ const CardImgWrap = styled.div`
   cursor: pointer;
 
   &:hover ${CardOverlay} {
-    opacity: 0.6;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:hover ${CardName} {
+    opacity: 1;
   }
 `;
 
@@ -64,15 +78,9 @@ const CardTitle = styled.h1`
   font-weight: 400;
   margin: 15px 0px;
   color: #0070f3;
-
-  z-index: 1000;
-`;
-
-const CardName = styled.h1`
-  color: white;
-  font-size: 18px;
-  position: absolute;
   text-align: center;
 `;
+
+
 
 export default MemberCard;

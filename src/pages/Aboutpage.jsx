@@ -46,7 +46,7 @@ const Aboutpage = () => {
           <AboutContent isImageFirst={false} />
           <Fade>
           <AboutTitle>
-            Our <Blue>Mission</Blue>
+            Our <Blue>Goals</Blue>
           </AboutTitle>
           <Separator blue={true}/>
           </Fade>
