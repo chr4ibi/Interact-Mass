@@ -1,39 +1,35 @@
 // Import libraries
 import React from "react";
 import styled from "styled-components";
-import Fade from 'react-reveal/Fade'
+import Fade from "react-reveal/Fade";
 
 // Import assets
-import about1 from "../assets/illustrations/about1.svg";
+import Separator from "./Separator";
 
-const AboutContent = ({ isImageFirst }) => {
+const AboutContent = ({ isImageFirst, text, image, title, separator }) => {
   return (
-    <Container isImageFirst={isImageFirst}>
-      <Image src={about1}></Image>
-      <Fade right={isImageFirst} left={!isImageFirst} cascade>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. 
-        <br></br>
-        <br></br>
-        Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. 
-        Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-        <br></br>
-        <br></br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. 
-      </Paragraph>
+    <>
+      <Fade top>
+        <Title>{title}</Title>
       </Fade>
-    </Container>
+      <Fade top>
+        { separator ? <Separator blue={true}/> : "" }
+      </Fade>
+      <Container isImageFirst={isImageFirst}>
+        <Image src={image}></Image>
+        <Fade right={isImageFirst} left={!isImageFirst} cascade>
+          <Paragraph>
+            {text.p1}
+            <br></br>
+            <br></br>
+            {text.p2}
+            <br></br>
+            <br></br>
+            {text.p3}
+          </Paragraph>
+        </Fade>
+      </Container>
+    </>
   );
 };
 
@@ -42,10 +38,11 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 100px;
-  flex-direction: ${({isImageFirst}) => isImageFirst ? 'row' : 'row-reverse'};
+  flex-direction: ${({ isImageFirst }) =>
+    isImageFirst ? "row" : "row-reverse"};
 
-  @media screen and (max-width: 1100px){
-      flex-direction: column;
+  @media screen and (max-width: 1100px) {
+    flex-direction: column;
   }
 `;
 
@@ -55,12 +52,25 @@ const Image = styled.img`
 `;
 
 const Paragraph = styled.p`
-    width: 100%;
-    max-width: 600px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0px 20px;
 
-    @media screen and (max-width: 1100px){
-        text-align: center;
-    }
+  @media screen and (max-width: 1100px) {
+    text-align: center;
+    margin: 0px;
+  }
 `;
+
+const Title = styled.h1`
+  text-align: center;
+  font-size: 32px;
+  margin: 10px 0px;
+
+  @media screen and (max-width: 420px) {
+    font-size: 28px;
+  }
+`;
+
 
 export default AboutContent;

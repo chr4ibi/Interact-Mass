@@ -8,10 +8,51 @@ import missour5 from "../assets/images/missour5.jpeg";
 import missour6 from "../assets/images/missour6.jpeg";
 import missour7 from "../assets/images/missour7.jpeg";
 import missour8 from "../assets/images/missour8.jpeg";
-import bluesweat1 from '../assets/images/bluesweat1.jpeg'
-import brownsweat1 from '../assets/images/brownsweat1.jpeg'
-import blacksweat1 from '../assets/images/blacksweat1.jpeg'
-import purplesweat1 from '../assets/images/purplesweat1.jpeg'
+import bluesweat1 from "../assets/images/bluesweat1.jpeg";
+import brownsweat1 from "../assets/images/brownsweat1.jpeg";
+import blacksweat1 from "../assets/images/blacksweat1.jpeg";
+import purplesweat1 from "../assets/images/purplesweat1.jpeg";
+import about1 from '../assets/illustrations/about1.svg'
+import about2 from '../assets/illustrations/about2.svg'
+import about3 from '../assets/illustrations/about3.svg'
+
+export const aboutData = [
+  {
+    image: about1,
+    isImageFirst: true,
+    separator: false,
+    title: "",
+    text: {
+      p1: "The Interact is a club for high school students, whose purpose is to teach the importance of community service. The club has many branches around the world. ",
+      p2: "Since 1962, when it was founded by Rotary International, Interact has conducted humanitarian projects ranging from the smallest to the largest. Rotary engages its members in causes that strengthen international relations, improve lives, and create a better world in support of our peace efforts.",
+      p3: "Interact Massignon is the branch of this club at LFILM in District 9010. We are a group of 66 students involved in the issues that Morocco must overcome on a humanitarian level.",
+    }
+  },
+  {
+    image: about2,
+    isImageFirst: false,
+    separator: true,
+    title: "Our Values",
+    text: {
+      p1: "Our values are humanity, benevolence and sharing. Through our various actions, we are committed to helping as many people as possible in need.",
+      p2: "We are also and above all a family, which shares the same values and appreciates seeing the bonds created between our members.",
+      p3: "We are also and above all a family, which shares the same values and appreciates seeing the bonds created between our members.",
+    }
+  },
+  {
+    image: about3,
+    isImageFirst: true,
+    separator: true,
+    title: "Our Goals",
+    text: {
+      p1: "The Interact is our way as teenagers to make a difference in our society. Every day, every afternoon, every child's smile fills our hearts with pride and joy for doing something that may seem simple to us but means so much to those less fortunate. ",
+      p2: "That is why our goal has always been to defend noble causes that we all hold dear, hoping to make the Morocco of tomorrow a better country for its poorest inhabitants. ",
+      p3: "We, the generation of tomorrow, must achieve this goal to make our country and our world a better place.",
+    }
+  },
+
+
+]
 
 export const memberList = [
   {
@@ -46,12 +87,12 @@ export const memberList = [
   },
   {
     name: "Kenza Benabdillah",
-    role: "Responsible Communication",
+    role: "Head Of Communication",
     profilePic: profilepic,
   },
   {
     name: "Lina Bensmail",
-    role: "Responsible Communication",
+    role: "Head Of Communication",
     profilePic: profilepic,
   },
   {
@@ -305,52 +346,6 @@ export const actionList = [
       missour8,
     ],
   },
-  {
-    title: "Missour",
-    date: "20/06/2021",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollit molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborunumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
-    images: [
-      missour1,
-      missour2,
-      missour3,
-      missour4,
-      missour5,
-      missour6,
-      missour7,
-      missour8,
-      missour1,
-      missour2,
-      missour3,
-      missour4,
-      missour5,
-      missour6,
-      missour7,
-      missour8,
-    ],
-  },
-  {
-    title: "Missour",
-    date: "20/06/2021",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollit molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborunumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
-    images: [
-      missour1,
-      missour2,
-      missour3,
-      missour4,
-      missour5,
-      missour6,
-      missour7,
-      missour8,
-      missour1,
-      missour2,
-      missour3,
-      missour4,
-      missour5,
-      missour6,
-      missour7,
-      missour8,
-    ],
-  },
 ];
 
 export const productList = [
@@ -360,7 +355,7 @@ export const productList = [
     price: 250,
     sizes: ["Small", "Medium"],
     colors: ["#D1C2EB", "#000"],
-    images: [purplesweat1]
+    images: [purplesweat1],
   },
   {
     id: 1,
@@ -368,7 +363,7 @@ export const productList = [
     price: 250,
     sizes: ["Small", "Medium"],
     colors: ["#CADFF0", "#fff"],
-    images: [bluesweat1]
+    images: [bluesweat1],
   },
   {
     id: 2,
@@ -376,7 +371,7 @@ export const productList = [
     price: 250,
     sizes: ["Small", "Medium"],
     colors: ["#000", "#fff"],
-    images: [blacksweat1]
+    images: [blacksweat1],
   },
   {
     id: 3,
@@ -384,6 +379,6 @@ export const productList = [
     price: 250,
     sizes: ["Small", "Medium"],
     colors: ["#DBC7AE", "#fff"],
-    images: [brownsweat1]
-  }
-]
+    images: [brownsweat1],
+  },
+];

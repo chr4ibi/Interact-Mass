@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 import MemberCard from "../components/MemberCard";
 
 // Import assets
-import { memberList } from "../utils/data";
+import { memberList, aboutData } from "../utils/data";
 import wave from "../assets/illustrations/wave.svg";
 
 const Aboutpage = () => {
@@ -32,35 +32,30 @@ const Aboutpage = () => {
               We are <Blue>Interact Mass</Blue>
             </AboutTitle>
             <AboutDesc>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              We are Interact Mass, a group of teenagers trying to make the
+              world a better place. We’re all from the same high
+              school and we do charity actions every week.
             </AboutDesc>
           </Fade>
-          <AboutContent isImageFirst={true} />
-          <Fade top>
-          <AboutTitle>
-            Our <Blue>Values</Blue>
-          </AboutTitle>
-          <Separator blue={true}/>
-          </Fade>
-          <AboutContent isImageFirst={false} />
-          <Fade>
-          <AboutTitle>
-            Our <Blue>Goals</Blue>
-          </AboutTitle>
-          <Separator blue={true}/>
-          </Fade>
-          <AboutContent isImageFirst={true} />
+          {aboutData.map((e) => {
+            return (
+              <AboutContent
+                title={e.title}
+                isImageFirst={e.isImageFirst}
+                separator={e.separator}
+                image={e.image}
+                text={e.text}
+              />
+            );
+          })}
         </AboutWrapper>
       </AboutSection>
       <MembersSection>
         <Wave></Wave>
         <MembersWrapper>
           <Fade top>
-            <AboutTitle>
-              Meet Our <Blue>Team</Blue>
-            </AboutTitle>
-            <Separator blue={true}/>
+            <AboutTitle>Meet Our Team</AboutTitle>
+            <Separator blue={true} />
           </Fade>
           <MemberCards>
             {memberList.map((e) => {
@@ -116,6 +111,7 @@ const AboutDesc = styled.p`
   font-size: 16px;
   text-align: center;
   max-width: 450px;
+  margin-bottom: 5px;
 `;
 
 const Blue = styled.span`
