@@ -42,16 +42,37 @@ const Container = styled.div`
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
+  margin: 10px 0px;
+
+  @media screen and (max-width: 1000px){
+    flex-direction: column;
+    margin: 0px;
+  }
 `;
 
 const ActionTitle = styled.h1`
   color: #0070f3;
   line-height: 1;
+  font-size: 28px;
+  font-weight: 500;
+  max-width: 1000px;
+
+  @media screen and (max-width: 1000px){
+    font-size: 24px;
+  }
 `;
 
 const ActionDate = styled.h2`
   color: #666666;
   font-weight: 400;
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+
+  @media screen and (max-width: 1000px){
+    font-size: 24px;
+    justify-content: flex-start;
+  }
 `;
 
 const ActionDesc = styled.p`

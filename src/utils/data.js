@@ -324,9 +324,9 @@ export const memberList = [
 
 export const actionList = [
   {
-    title: "Missour",
-    date: "20/06/2021",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollit molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborunumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
+    title: "Charity Action : Renovation of a school in Missour.",
+    date: "June 2021",
+    desc: "",
     images: [
       missour1,
       missour2,
@@ -336,15 +336,55 @@ export const actionList = [
       missour6,
       missour7,
       missour8,
-      missour1,
-      missour2,
-      missour3,
-      missour4,
-      missour5,
-      missour6,
-      missour7,
-      missour8,
     ],
+  },
+  {
+    title: "Charity Action : Preparation and distribution of meal baskets in Casablanca",
+    date: "December 2021",
+    desc: "",
+    images : [],
+  },
+  {
+    title: "Charity Action : Distribution of basic necessities (water, soap, blankets, medicine, food) to the homeless of Casablanca",
+    date: "January 2021",
+    desc: "",
+    images : [],
+  },
+  {
+    title: "Charity Action : Free tutoring for children in need from the association Heure Joyeuse.",
+    date: "Every Saturday",
+    desc: "",
+    images : [],
+  },
+  {
+    title: "Ecological Action : Beach cleaning",
+    date: "October 2021",
+    desc: "",
+    images : [],
+  },
+  {
+    title: "Awareness-raising : Short film about harassment and interview with a psychologist",
+    date: "November 2021",
+    desc: "",
+    images : [],
+  },
+  {
+    title: "Awareness-raising : Song about domestic violences",
+    date: "February 2022",
+    desc: "",
+    images : [],
+  },
+  {
+    title: "Fundraising : Sweatshirts sales",
+    date: "January 2022",
+    desc: "",
+    images : [],
+  },
+  {
+    title: "Fundraising : Roses and gifts sales for Valentine's Day",
+    date: "Every Year",
+    desc: "",
+    images : [],
   },
 ];
 
