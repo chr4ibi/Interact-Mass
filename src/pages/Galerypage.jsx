@@ -14,6 +14,7 @@ import { getActions } from "../utils/api";
 const Galerypage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [actions, setActions] = useState([])
+  console.log(process.env)
 
   const toggle = () => {
     setIsOpen(!isOpen);

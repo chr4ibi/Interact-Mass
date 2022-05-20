@@ -72,12 +72,6 @@ const ActionDate = styled.h2`
   }
 `;
 
-const ActionDesc = styled.p`
-  text-align: justify;
-  margin: 10px 0px;
-  color: #000;
-`;
-
 const Img = styled.div`
   background-image: url(${(props) => props.bg});
   background-position: center;
