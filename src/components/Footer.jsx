@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <FooterContainer>
             <FooterText>Copyright 2021 | All Rights Reserved | Interact Mass</FooterText>
-            <FooterText>Made with heart by <PortfolioLink target="_blank" href="#">chr4ibi</PortfolioLink></FooterText>
+            <FooterText>Made with heart by <PortfolioLink target="_blank" href="https://www.alichraibi.tech/">chr4ibi</PortfolioLink></FooterText>
         </FooterContainer>
     )
 }

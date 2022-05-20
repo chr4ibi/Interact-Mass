@@ -1,5 +1,5 @@
 // Import libraries
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 // Import components
@@ -9,22 +9,33 @@ import Footer from "../components/Footer";
 import ActionSection from "../components/ActionSection";
 
 // Import assets
-import { actionList } from "../utils/data";
+import { getActions } from "../utils/api";
 
 const Galerypage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [actions, setActions] = useState([])
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+  
+  const fetchData = async () => {
+    const data = await getActions() || []
+    setActions(data)
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
   return (
     <GaleryContainer>
       <Navbar toggle={toggle} isBlack={true} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <ActionsSection>
         <ActionsWrapper>
-          {actionList.map((e) => {
-            return <ActionSection title={e.title} date={e.date} desc={e.desc} images={e.images} />
+          {actions.map((e) => {
+            return <ActionSection title={e.title} date={e.date} images={e.images} />
           })}
         </ActionsWrapper>
       </ActionsSection>
@@ -44,6 +55,7 @@ const ActionsSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 `;
 
 const ActionsWrapper = styled.div`

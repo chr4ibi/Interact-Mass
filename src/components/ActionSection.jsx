@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade"
 
-const ActionSection = ({ title, date, desc, images }) => {
+const ActionSection = ({ title, date, images }) => {
   return (
     <Container>
       <Header>
@@ -14,15 +14,12 @@ const ActionSection = ({ title, date, desc, images }) => {
         <ActionDate>{date}</ActionDate>
         </Fade>
       </Header>
-      <Fade bottom>
-      <ActionDesc>{desc}</ActionDesc>
-      </Fade>
       <ImgWrapper>
         {images.map((e) => {
           return (
             <ImgLink>
             <Fade bottom>
-              <Img bg={e}></Img>
+              <Img bg={e.url}></Img>
               </Fade>
             </ImgLink>
           );

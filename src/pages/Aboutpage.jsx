@@ -1,5 +1,5 @@
 // Import libraries
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
@@ -10,17 +10,33 @@ import AboutContent from "../components/AboutContent";
 import Separator from "../components/Separator";
 import Footer from "../components/Footer";
 import MemberCard from "../components/MemberCard";
+import { getMembers } from "../utils/api";
 
 // Import assets
-import { memberList, aboutData } from "../utils/data";
+import { aboutData } from "../utils/data";
 import wave from "../assets/illustrations/wave.svg";
 
 const Aboutpage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [members, setMembers] = useState([])
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const fetchData = async () => {
+    const data = await getMembers() || []
+    setMembers(data)
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  
+
+
+
   return (
     <AboutContainer>
       <Navbar toggle={toggle} isBlack={true} />
@@ -58,10 +74,10 @@ const Aboutpage = () => {
             <Separator blue={true} />
           </Fade>
           <MemberCards>
-            {memberList.map((e) => {
+            {members.map((e) => {
               return (
                 <MemberCard
-                  profilePic={e.profilePic}
+                  profilePic={e.image.url}
                   name={e.name}
                   role={e.role}
                 />
